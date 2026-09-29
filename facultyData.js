@@ -1,4 +1,6 @@
-export const SECTION_ORDER = [
+(function(){
+if (window.FACULTY_DATA) return;
+const SECTION_ORDER = [
   ["education", "Educational Qualification"],
   ["research", "Area of Research"],
   ["teaching", "Teaching Domain"],
@@ -11,7 +13,7 @@ export const SECTION_ORDER = [
   ["extension", "Extension Activity"]
 ];
 
-export const FACULTY = {
+const FACULTY = {
   "gyana-ranjan-mohanty": {
     name: "Gyana Ranjan Mohanty", initials: "GM",
     role: "Head of the Department · Assistant Professor", spec: "MSc, NET",
@@ -114,9 +116,44 @@ export const FACULTY = {
   },
   "preeti-das": {
     name: "Dr. Preeti Das, PhD", initials: "PD", role: "Assistant Professor (Guest Faculty)", spec: "",
+    phone: "7205681268", emails: ["das.preetidas.preeti@gmail.com"],
     links: [{ label: "Google Scholar profile", url: "https://scholar.google.com/citations?user=GvAlstwAAAAJ&hl=en" }],
     cv: "cv/preeti-das.pdf",
-    sections: { research: "Biosensor, Fiber Optic Sensor, Nano photonics." }
+    sections: {
+      education: `<table style="width:100%;border-collapse:collapse;font-size:14.5px;">
+        <tr><td style="padding:4px 8px 4px 0;"><strong>Ph.D.</strong></td><td style="padding:4px 8px;">Physics (Materials Physics)</td><td style="padding:4px 8px;">Berhampur University</td><td style="padding:4px 8px;">2025</td><td style="padding:4px 0;">Awarded</td></tr>
+        <tr><td style="padding:4px 8px 4px 0;"><strong>M.Phil.</strong></td><td style="padding:4px 8px;">Physics</td><td style="padding:4px 8px;">Berhampur University</td><td style="padding:4px 8px;">2017</td><td style="padding:4px 0;">Passed</td></tr>
+        <tr><td style="padding:4px 8px 4px 0;"><strong>M.Sc.</strong></td><td style="padding:4px 8px;">Physics</td><td style="padding:4px 8px;">Berhampur University</td><td style="padding:4px 8px;">2014</td><td style="padding:4px 0;">First Class</td></tr>
+        <tr><td style="padding:4px 8px 4px 0;"><strong>B.Sc. (Hons)</strong></td><td style="padding:4px 8px;">Physics (Honours)</td><td style="padding:4px 8px;">Berhampur University</td><td style="padding:4px 8px;">2012</td><td style="padding:4px 0;">First Class Distinction</td></tr>
+        <tr><td style="padding:4px 8px 4px 0;"><strong>+2 Science</strong></td><td style="padding:4px 8px;">Physics, Chemistry, Math, Stats</td><td style="padding:4px 8px;">CHSE, Odisha</td><td style="padding:4px 8px;">2009</td><td style="padding:4px 0;">First Division</td></tr>
+        <tr><td style="padding:4px 8px 4px 0;"><strong>10th (HSCE)</strong></td><td style="padding:4px 8px;">General Subjects</td><td style="padding:4px 8px;">BSE, Odisha</td><td style="padding:4px 8px;">2007</td><td style="padding:4px 0;">First Division</td></tr>
+      </table>
+      <p style="margin:10px 0 0;font-size:14.5px;"><strong>Ph.D. Thesis:</strong> Spinel and Perovskite Oxides for Sensing Application.</p>`,
+      research: "Optical fiber-based sensors; materials physics and nanotechnology (spinel &amp; perovskite oxides); biosensors (non-invasive blood glucose, sialic acid sensing for cancer detection); surface plasmon resonance and interferometry-based gas/chemical sensors.",
+      experience: `<ul>
+        <li>Assistant Professor (Guest Faculty) &mdash; Department of Physics, Vikram Dev University (June 2026 &ndash; Present).</li>
+        <li>Assistant Professor (Guest Faculty) &mdash; Department of Mathematics, Central University of Odisha, Koraput (July 2025 &ndash; May 2026).</li>
+        <li>Assistant Professor (Guest Faculty) &mdash; Department of Physics, Khallikote Unitary University, Berhampur (June 2024 &ndash; April 2025).</li>
+        <li>Guest Faculty &mdash; Department of Physics, Vikram Dev Autonomous College, Jeypore (Sessions: 2017&ndash;2018, 2018&ndash;2019, July 2019 &ndash; Sept 2019).</li>
+        <li>Guest Faculty &mdash; Department of Physics, S.B. Rath Govt. (Auto) Women&rsquo;s College, Berhampur (July 2016 &ndash; March 2017).</li>
+      </ul>`,
+      workshops: `<ul>
+        <li>Poster Presentation: &ldquo;Tailored Co<sub>3</sub>O<sub>4</sub> Nanoparticle-Coated Optical Fibers for Enhanced Sialic Acid Sensing: An Application towards Cancer Detection&rdquo; &mdash; International Conference on Advanced Functional Materials and Devices (AFMD-2024), SRM Institute of Science and Technology, Feb 26&ndash;29, 2024.</li>
+        <li>Paper Presentation: &ldquo;An Ultra-Sensitive Acetone Detection in Co<sub>3</sub>O<sub>4</sub> Tailored Nanostructures-Coated Optical Fibers at Room Temperature&rdquo; &mdash; 7th International Conference on Nanoscience and Nanotechnology (ICONN-2023), SRM IST, March 27&ndash;29, 2023.</li>
+        <li>Poster Presentation &amp; Award: &ldquo;Enhanced Acetone Gas Detection Using LaFeO<sub>3</sub> and Cobalt-Doped LaFeO<sub>3</sub> Coated Optical Fiber Sensors&rdquo; &mdash; Research Scholars&rsquo; Conclave, Berhampur University, Sept 28, 2024. Secured 1st Position in Physiochemical Sciences.</li>
+        <li>Poster Presentation &amp; Award: &ldquo;Enhanced Acetone Sensing at Room Temperature using Tailored Co<sub>3</sub>O<sub>4</sub> Nanostructures-Coated Optical Fibers: An Application towards Non-invasive Blood Glucose Sensor&rdquo; &mdash; Research Scholars&rsquo; Conclave, Berhampur University, Sept 23, 2023. Secured 2nd Position.</li>
+      </ul>`,
+      publications: `<ol>
+        <li>P. Das, B. C. Behera, S. K. Panigrahy, A. K. Sahu, S. K. Tripathy, &ldquo;Enhanced acetone sensing at room temperature using tailored Co<sub>3</sub>O<sub>4</sub> nanostructures-coated optical fibers: An application towards non-invasive blood glucose sensor&rdquo;, <em>Surfaces and Interfaces</em>, 41, 103256.</li>
+        <li>P. Das, B. C. Behera, S. P. Dash, A. N. ESR, K. D. B, N. K. Sahoo, S. K. Tripathy, &ldquo;Co<sub>3</sub>O<sub>4</sub> Magnetic Nanoparticles-Coated Optical Fibers for Sensing Sialic Acid&rdquo;, <em>ACS Applied Nano Materials</em>, 5 (7), 8973&ndash;8981.</li>
+        <li>D. Bhuvanesh, A. N. ESR, P. Praveen, P. Das, S. K. Tripathy, B. C. Behera, &ldquo;Investigation of glucose sensing via controlled copper concentration in CuO for non-enzymatic glucose biosensor&rdquo;, <em>ECS Journal of Solid State Science and Technology</em>, 12 (11), 117004.</li>
+        <li>S. K. Panigrahy, P. Das, S. K. Tripathy, &ldquo;Agricultural soil health monitoring using photonic crystal fiber based on combined principles of surface plasmon resonance and interferometry for lead ion detection&rdquo;, <em>Journal of Nanophotonics</em>, 17 (3), 036013.</li>
+        <li>N. Pattanayak, P. Das, M. R. Sahoo, P. Panda, M. Pradhan, K. Pradhan, et al., &ldquo;Glucose sensing using pristine and Co-doped hematite fiber-optic sensors: Experimental and DFT analysis&rdquo;, <em>Langmuir</em>, 41 (13), 8866&ndash;8875.</li>
+        <li>K. C. Nayak, A. K. Sahu, P. Das, S. K. Tripathy, &ldquo;Performance enhancement of Co<sub>3</sub>O<sub>4</sub>@rGO nanocomposite-coated optical fiber for acetone sensing&rdquo;, <em>AIP Conference Proceedings</em>, 3198 (1), 020038.</li>
+        <li>A. K. Sahu, K. C. Nayak, P. Das, S. K. Tripathy, &ldquo;Tailoring Co<sub>3</sub>O<sub>4</sub>@ZnO Nano Composite Coating for Acetone Detection Using Unclad Optical Fiber Sensor at Room Temperature&rdquo;, <em>2023 IEEE Workshop on Recent Advances in Photonics (WRAP)</em>, 1&ndash;3.</li>
+        <li>P. Das, B. C. Behera, A. K. Sahu, A. N. ESR, S. K. Tripathy, &ldquo;Enhanced Optical Sensing of Sialic Acid using a Flattened Balloon-Shaped Fiber Functionalized with Co<sub>3</sub>O<sub>4</sub> Nanoparticles&rdquo;, <em>Optics Communications</em>, 133705.</li>
+      </ol>`
+    }
   },
   "lipsa-rani-karna": {
     name: "Dr. Lipsa Rani Karna, PhD", initials: "LK", role: "Assistant Professor (Guest Faculty)", spec: "M.Sc., GATE",
@@ -179,3 +216,7 @@ export const FACULTY = {
     name: "Shri Kamal Lochan Nayak", initials: "KL", role: "Support Staff", spec: "", links: [], cv: null, avatarSrc: "assets/kamal-lochan.jpg"
   }
 };
+
+window.FACULTY_DATA = { SECTION_ORDER, FACULTY };
+window.dispatchEvent(new Event('facultydata-ready'));
+})();
