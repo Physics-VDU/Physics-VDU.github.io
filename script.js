@@ -31,7 +31,7 @@
       '<h3 style="font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;margin:0 0 2px;color:#1c2430;">' + esc(name) + '</h3>' +
       '<div style="color:#b8862e;font-size:13.5px;font-weight:600;margin-bottom:8px;">' + esc(c.role) + '</div>' +
       (c.spec ? '<p style="color:#5b6472;font-size:14.5px;margin:0 0 6px;">' + esc(c.spec) + '</p>' : '') +
-      (c.researchFocus ? '<p style="color:#5b6472;font-size:14.5px;margin:0 0 6px;"><strong style="color:#1c2430;">Research focus:</strong> ' + esc(c.researchFocus) + '</p>' : '') +
+      (c.researchFocus ? '<p style="color:#5b6472;font-size:14.5px;margin:0 0 6px;"><strong style="color:#1c2430;">Teaching &amp; research expertise:</strong> ' + esc(c.researchFocus) + '</p>' : '') +
       (c.phone ? '<p style="color:#5b6472;font-size:13.5px;margin:0 0 6px;"><a href="tel:+91' + esc(c.phone) + '" style="display:inline-flex;align-items:center;gap:6px;color:#2f5d58;text-decoration:none;">' + SVG_PHONE + '<span>+91-' + esc(c.phone) + '</span></a></p>' : '') +
       '<div style="display:flex;flex-direction:column;gap:6px;margin-top:2px;">' + emails + links + '</div>' +
       '<div style="display:flex;gap:14px;margin-top:8px;">' +
