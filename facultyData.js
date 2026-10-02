@@ -216,7 +216,7 @@ const FACULTY = {
     }
   },
   "dhabaleswar": {
-    name: "Shri Dhabaleswar", initials: "SD", role: "Junior Assistant cum DEO", spec: "", links: [], cv: null, avatarSrc: "assets/dhabaleswar.jpg",
+    name: "Shri Dhabaleswar Nayak", initials: "SD", role: "Junior Assistant cum DEO", spec: "", links: [], cv: null, avatarSrc: "assets/dhabaleswar.jpg",
     sections: {
       education: "<ul><li>M.A. Philosophy &mdash; Vikram Dev University, Jeypore</li><li>B.A. Philosophy &mdash; Vikram Deb (Auto.) College, Jeypore</li><li>+2 Arts &mdash; Vikram Deb (Auto.) College, Jeypore</li><li>10th &mdash; Govt. High School, Jeypore</li></ul>"
     }
