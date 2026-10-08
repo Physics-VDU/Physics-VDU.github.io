@@ -4,6 +4,8 @@
 //   added: YYYY-MM-DD  (items added in the last 30 days get a "New" badge)
 //   url: the Google Drive "Anyone with the link can view" address
 window.RESOURCES = [
+  {"title": "Foundations of Physical Sciences in IKS - Unit 2 - Slides", "type": "Slides", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/1CK_19B5ekEo8q7oiy85eIj148jccjsxt/view?usp=sharing", "added": "2026-10-08"},
+  {"title": "Foundations of Physical Sciences in IKS - Unit 2 - Lecture Notes", "type": "Lecture Notes", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/1h0Qak0buRtXb86G4Oli9pxjiwB5Xavg6/view?usp=sharing", "added": "2026-10-08"},
   {"title": "Class Time Table", "type": "Time Table", "programme": "", "semester": "", "year": "", "url": "https://drive.google.com/file/d/1E3qYszaa8eeJQcyqPGrPPo7cv5BO-Gu5/view?usp=drive_link", "added": "2026-10-08"},
   {"title": "Foundations of Physical Sciences in IKS - Syllabus", "type": "Syllabus", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/17RPi4dWvOgmYo2ZHkEl8uEmFvjGbGtgS/view?usp=drive_link", "added": "2026-09-29"},
   {"title": "Foundations of Physical Sciences in IKS - Unit 1, Part 1 - Slides", "type": "Slides", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/1h5YJE0SEhbj5f1t1L96tnfIiFUprUSGR/view?usp=sharing", "added": "2026-10-08"},
