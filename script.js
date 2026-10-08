@@ -51,7 +51,7 @@
 
   /* ---------- study resources ---------- */
   var ALL = window.RESOURCES || [];
-  var TYPES = ['All', 'Syllabus', 'Question Papers', 'Lecture Notes', 'Slides', 'Assignments & Labs'];
+  var TYPES = ['All', 'Syllabus', 'Time Table', 'Question Papers', 'Lecture Notes', 'Slides', 'Assignments & Labs'];
   var PROGS = ['All', 'B.Sc. (Hons)', 'M.Sc.'];
   var state = { type: 'All', prog: 'All', q: '' };
 
