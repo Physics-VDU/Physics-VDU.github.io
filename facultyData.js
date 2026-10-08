@@ -31,7 +31,7 @@ const FACULTY = {
     }
   },
   "aishwarya-madhuri": {
-    card: {"researchFocus": "nanomaterials science, thin-film deposition & characterization, DC magnetron sputtered metal nitrides, Al-based ternary alloys for industrial hard-coating applications", "objectPosition": "center"},
+    card: {"researchFocus": "nanomaterials science, thin-film deposition & characterization, DC magnetron sputtered metal nitrides, Al-based ternary alloys for industrial hard-coating applications", "objectPosition": "center 5%"},
     name: "Dr. Aishwarya Madhuri, PhD", initials: "AM", role: "Assistant Professor (Guest Faculty)", spec: "Ph.D. (Physics), NIT Manipur; M.Sc. Physics; GATE 2021",
     phone: "9938312969", emails: ["aishwaryamadhuri99@gmail.com"],
     links: [
@@ -131,7 +131,7 @@ const FACULTY = {
     }
   },
   "preeti-das": {
-    card: {"researchFocus": "Biosensor, Fiber Optic Sensor, Nano photonics", "objectPosition": "center", "phone": "", "emails": []},
+    card: {"researchFocus": "Biosensor, Fiber Optic Sensor, Nano photonics", "objectPosition": "center"},
     name: "Dr. Preeti Das, PhD", initials: "PD", role: "Assistant Professor (Guest Faculty)", spec: "",
     phone: "7205681268", emails: ["das.preetidas.preeti@gmail.com"],
     links: [{ label: "Google Scholar profile", url: "https://scholar.google.com/citations?user=GvAlstwAAAAJ&hl=en" }],
@@ -201,6 +201,7 @@ const FACULTY = {
     card: {"researchFocus": "III-Nitride Semiconductors, Pyroelectric Effects & Thermal Transport, Optoelectronic Applications", "objectPosition": "center"},
     name: "Dr. Gopal Hansdah, PhD", initials: "GH", role: "Assistant Professor (Guest Faculty)", spec: "",
     links: [{ label: "ResearchGate profile", url: "https://www.researchgate.net/profile/Gopal-Hansdah" }],
+    phone: "9668811405", emails: [],
     cv: "cv/gopal-hansdah.pdf", avatarSrc: "assets/gopal-hansdah.jpg",
     sections: { research: "III-Nitride Semiconductors, Pyroelectric Effects & Thermal Transport, Optoelectronic Applications." }
   },
@@ -208,12 +209,14 @@ const FACULTY = {
     card: {"researchFocus": "Density Functional Theory, Electronic Spin Transport, NEGF, 2D Materials", "objectPosition": "center"},
     name: "Dr. Alok Ranjan Sahoo, PhD", initials: "AS", role: "Assistant Professor (Guest Faculty)", spec: "",
     links: [{ label: "Google Scholar profile", url: "https://scholar.google.com/citations?user=nNCrPp4AAAAJ&hl=en" }],
+    phone: "9444129475", emails: [],
     cv: "cv/alok-ranjan-sahoo.pdf", avatarSrc: "assets/alok-ranjan-sahoo.jpg",
     sections: { research: "Density Functional Theory, Electronic Spin Transport, NEGF, 2D Materials." }
   },
   "bikash-chandra-swain": {
     card: {"researchFocus": "Single-Molecule Biophysics, IDPs, smFRET, FCS, LLPS"},
     name: "Dr. Bikash Chandra Swain, PhD", initials: "BS", role: "Assistant Professor (Guest Faculty)", spec: "",
+    phone: "9438763890", emails: [],
     links: [
       { label: "Google Scholar profile", url: "https://scholar.google.com/citations?user=85MmpgkAAAAJ&hl=en" },
       { label: "Personal website", url: "https://bikashbiophy.github.io/Webpage/" }
@@ -231,14 +234,14 @@ const FACULTY = {
   },
   "dhabaleswar": {
     card: {},
-    name: "Shri Dhabaleswar Nayak", initials: "SD", role: "Junior Assistant cum DEO", spec: "", links: [], cv: null, avatarSrc: "assets/dhabaleswar.jpg",
+    name: "Shri Dhabaleswar Nayak", initials: "SD", role: "Junior Assistant cum DEO", spec: "", phone: "7008216298", emails: [], links: [], cv: null, avatarSrc: "assets/dhabaleswar.jpg",
     sections: {
       education: "<ul><li>M.A. Philosophy &mdash; Vikram Dev University, Jeypore</li><li>B.A. Philosophy &mdash; Vikram Deb (Auto.) College, Jeypore</li><li>+2 Arts &mdash; Vikram Deb (Auto.) College, Jeypore</li><li>10th &mdash; Govt. High School, Jeypore</li></ul>"
     }
   },
   "kamal-lochan": {
-    card: {"objectPosition": "center 25%", "zoom": "1.5"},
-    name: "Shri Kamal Lochan Nayak", initials: "KL", role: "Support Staff", spec: "", links: [], cv: null, avatarSrc: "assets/kamal-lochan.jpg"
+    card: {"objectPosition": "center 15%", "zoom": "1.3"},
+    name: "Shri Kamal Lochan Nayak", initials: "KL", role: "Support Staff", spec: "", phone: "9439839668", emails: [], links: [], cv: null, avatarSrc: "assets/kamal-lochan.jpg"
   }
 };
 

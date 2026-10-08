@@ -31,7 +31,7 @@
       '<h3 style="font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;margin:0 0 2px;color:#1c2430;">' + esc(name) + '</h3>' +
       '<div style="color:#b8862e;font-size:13.5px;font-weight:600;margin-bottom:8px;">' + esc(c.role) + '</div>' +
       (c.spec ? '<p style="color:#5b6472;font-size:14.5px;margin:0 0 6px;">' + esc(c.spec) + '</p>' : '') +
-      (c.researchFocus ? '<p style="color:#5b6472;font-size:14.5px;margin:0 0 6px;"><strong style="color:#1c2430;">Teaching &amp; research expertise:</strong> ' + esc(c.researchFocus) + '</p>' : '') +
+      (c.researchFocus ? '<p style="color:#5b6472;font-size:14.5px;margin:0 0 6px;"><strong style="color:#1c2430;">Research focus:</strong> ' + esc(c.researchFocus) + '</p>' : '') +
       (c.phone ? '<p style="color:#5b6472;font-size:13.5px;margin:0 0 6px;"><a href="tel:+91' + esc(c.phone) + '" style="display:inline-flex;align-items:center;gap:6px;color:#2f5d58;text-decoration:none;">' + SVG_PHONE + '<span>+91-' + esc(c.phone) + '</span></a></p>' : '') +
       '<div style="display:flex;flex-direction:column;gap:6px;margin-top:2px;">' + emails + links + '</div>' +
       '<div style="display:flex;gap:14px;margin-top:8px;">' +
@@ -69,9 +69,17 @@
     var q = state.q.trim().toLowerCase(), now = Date.now();
     var shown = ALL.filter(function (r) {
       return (state.type === 'All' || r.type === state.type) && (state.prog === 'All' || r.programme === state.prog) &&
-        (!q || [r.title, r.type, r.programme, r.semester, r.year].join(' ').toLowerCase().indexOf(q) > -1);
+        (!q || [r.title, r.course, r.type, r.programme, r.semester, r.year].join(' ').toLowerCase().indexOf(q) > -1);
     }).sort(function (a, b) { return (b.added || '').localeCompare(a.added || ''); });
-    $('resRows').innerHTML = shown.map(function (r) {
+
+    var groups = [], byName = {};
+    shown.forEach(function (r) {
+      var name = r.course || 'General';
+      if (!byName[name]) { byName[name] = []; groups.push(name); }
+      byName[name].push(r);
+    });
+
+    function rowHtml(r) {
       var isNew = r.added && (now - new Date(r.added).getTime()) < 30 * 86400000;
       var meta = [r.programme, r.semester, r.year, r.deadline ? 'Deadline: ' + r.deadline : ''].filter(Boolean).join(' \u00b7 ');
       return '<div class="res-row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 20px;align-items:center;padding:16px 18px;border:1px solid #ddd6c4;background:#fbf9f3;margin-bottom:10px;"><div>' +
@@ -80,8 +88,16 @@
         '<div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17px;line-height:1.3;">' + esc(r.title) + '</div>' +
         '<div style="color:#5b6472;font-size:14px;margin-top:3px;">' + esc(meta) + '</div></div>' +
         '<a href="' + esc(r.url) + '" target="_blank" rel="noopener" class="res-dl" style="background:#2f5d58;color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;padding:10px 18px;white-space:nowrap;">Download \u203a</a></div>';
+    }
+
+    $('resRows').innerHTML = groups.map(function (name) {
+      var rows = byName[name];
+      return '<details open style="margin-bottom:16px;">' +
+        '<summary style="cursor:pointer;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;color:#1c2430;padding:10px 2px;border-bottom:2px solid #b8862e;margin-bottom:12px;list-style:none;display:flex;align-items:center;gap:8px;">' +
+        '<span>' + esc(name) + '</span><span style="font-family:inherit;font-weight:600;font-size:13px;color:#5b6472;">(' + rows.length + ')</span></summary>' +
+        rows.map(rowHtml).join('') + '</details>';
     }).join('');
-    $('resEmpty').hidden = shown.length > 0;
+    $('resEmpty').hidden = groups.length > 0;
     $('resCount').textContent = 'Showing ' + shown.length + ' of ' + ALL.length + ' resources';
   }
   if ($('resRows')) {
