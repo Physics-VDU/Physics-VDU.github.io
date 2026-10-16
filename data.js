@@ -18,6 +18,9 @@ window.RESOURCES = [
 
 // GALLERY SLIDES - img = file in assets/, caption shown under the photo.
 window.SLIDES = [
+  {"img": "assets/faculty-group-1.jpg", "caption": "Department Faculty"},
+  {"img": "assets/faculty-group-2.jpg", "caption": "Department Faculty"},
+  {"img": "assets/faculty-group-3.jpg", "caption": "Department Faculty"},
   {"img": "assets/electronics-lab.jpg", "caption": "Electronics Lab"},
   {"img": "assets/spectrum-wall-magazine.jpg", "caption": "SPECTRUM Wall Magazine"},
   {"img": "assets/seminar-presenter.jpg", "caption": "Departmental Seminar — 18 Sep 2026"},
