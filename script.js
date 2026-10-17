@@ -51,9 +51,33 @@
 
   /* ---------- study resources ---------- */
   var ALL = window.RESOURCES || [];
+  ALL.forEach(function (r, i) { r._i = i; });
+  var LIVE = ALL.filter(function (r) { return r.url; });   /* entries with a link; empty url = "Coming soon" placeholder */
   var TYPES = ['All', 'Syllabus', 'Time Table', 'Question Papers', 'Lecture Notes', 'Slides', 'Assignments & Labs'];
   var PROGS = ['All', 'B.Sc. (Hons)', 'M.Sc.'];
   var state = { type: 'All', prog: 'All', q: '' };
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  function fmtDate(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '');
+    return m ? (+m[3]) + ' ' + MONTHS[+m[2] - 1] + ' ' + m[1] : '';
+  }
+
+  /* styles for the unit grid (kept here so only script.js needs replacing) */
+  if ($('resRows') && !$('unitCss')) {
+    var st = document.createElement('style');
+    st.id = 'unitCss';
+    st.textContent =
+      '.unit-grid{border:1px solid #ddd6c4;background:#fbf9f3;margin-bottom:10px;}' +
+      '.unit-head,.unit-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:8px 16px;align-items:start;padding:14px 18px;}' +
+      '.unit-head{align-items:center;font-size:13px;font-weight:700;color:#5b6472;border-bottom:1.5px solid #1c2430;padding-top:10px;padding-bottom:10px;}' +
+      '.unit-row{border-bottom:1px solid #ddd6c4;}' +
+      '.unit-row:last-child{border-bottom:0;}' +
+      '.unit-name{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16.5px;line-height:1.3;padding-top:6px;}' +
+      '.unit-cell-label{display:none;}' +
+      '@media (max-width:760px){.unit-head{display:none;}.unit-row{grid-template-columns:1fr 1fr;padding:14px;}.unit-name{grid-column:1/-1;padding-top:0;}' +
+      '.unit-cell-label{display:block;font-size:12.5px;font-weight:600;color:#5b6472;margin-bottom:5px;}}';
+    document.head.appendChild(st);
+  }
 
   function chip(label, active, size, pad, key, val) {
     return '<button data-k="' + key + '" data-v="' + esc(val) + '" style="font:inherit;font-size:' + size + 'px;font-weight:600;cursor:pointer;padding:' + pad + ';border-radius:999px;border:1.5px solid ' + (active ? '#141d33' : '#c9c1ab') + ';background:' + (active ? '#141d33' : 'transparent') + ';color:' + (active ? '#fff' : '#1c2430') + ';">' + esc(label) + '</button>';
@@ -62,43 +86,72 @@
   function renderResources() {
     if (!$('resRows')) return;
     $('resTypeChips').innerHTML = TYPES.map(function (x) {
-      var n = x === 'All' ? ALL.length : ALL.filter(function (r) { return r.type === x; }).length;
+      var n = x === 'All' ? LIVE.length : LIVE.filter(function (r) { return r.type === x; }).length;
       return chip(x + ' (' + n + ')', state.type === x, 14, '7px 14px', 'type', x);
     }).join('');
     $('resProgChips').innerHTML = PROGS.map(function (x) { return chip(x, state.prog === x, 13.5, '5px 12px', 'prog', x); }).join('');
     var q = state.q.trim().toLowerCase(), now = Date.now();
     var shown = ALL.filter(function (r) {
       return (state.type === 'All' || r.type === state.type) && (state.prog === 'All' || r.programme === state.prog) &&
-        (!q || [r.title, r.course, r.type, r.programme, r.semester, r.year].join(' ').toLowerCase().indexOf(q) > -1);
+        (!q || [r.title, r.course, r.unit, r.type, r.programme, r.semester, r.year].join(' ').toLowerCase().indexOf(q) > -1);
     }).sort(function (a, b) { return (b.added || '').localeCompare(a.added || ''); });
 
+    /* group by course; entries with a "unit" go into that course's Unit grid, the rest are normal rows */
     var groups = [], byName = {};
     shown.forEach(function (r) {
+      var isUnit = !!r.unit && (r.type === 'Lecture Notes' || r.type === 'Slides');
+      if (!isUnit && !r.url) return;
       var name = r.course || 'General';
-      if (!byName[name]) { byName[name] = []; groups.push(name); }
-      byName[name].push(r);
+      if (!byName[name]) { byName[name] = { rows: [], units: {}, unitList: [], n: 0 }; groups.push(name); }
+      var g = byName[name];
+      if (r.url) g.n++;
+      if (!isUnit) { g.rows.push(r); return; }
+      var u = g.units[r.unit];
+      if (!u) { u = g.units[r.unit] = { name: r.unit, notes: [], slides: [], first: r._i }; g.unitList.push(u); }
+      u.first = Math.min(u.first, r._i);
+      (r.type === 'Lecture Notes' ? u.notes : u.slides).push(r);
     });
 
+    function isNewItem(r) { return r.added && (now - new Date(r.added).getTime()) < 30 * 86400000; }
+    var NEWB = '<span style="font-weight:700;font-size:12px;color:#1c1404;background:#d9ab5c;padding:2px 9px;border-radius:2px;">New</span>';
+
     function rowHtml(r) {
-      var isNew = r.added && (now - new Date(r.added).getTime()) < 30 * 86400000;
       var meta = [r.programme, r.semester, r.year, r.deadline ? 'Deadline: ' + r.deadline : ''].filter(Boolean).join(' \u00b7 ');
       return '<div class="res-row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 20px;align-items:center;padding:16px 18px;border:1px solid #ddd6c4;background:#fbf9f3;margin-bottom:10px;"><div>' +
         '<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px;"><span style="font-weight:700;font-size:12px;color:#2f5d58;background:#e4eeec;padding:2px 9px;border-radius:2px;">' + esc(r.type) + '</span>' +
-        (isNew ? '<span style="font-weight:700;font-size:12px;color:#1c1404;background:#d9ab5c;padding:2px 9px;border-radius:2px;">New</span>' : '') + '</div>' +
+        (isNewItem(r) ? NEWB : '') + '</div>' +
         '<div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17px;line-height:1.3;">' + esc(r.title) + '</div>' +
         '<div style="color:#5b6472;font-size:14px;margin-top:3px;">' + esc(meta) + '</div></div>' +
         '<a href="' + esc(r.url) + '" target="_blank" rel="noopener" class="res-dl" style="background:#2f5d58;color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;padding:10px 18px;white-space:nowrap;">Download \u203a</a></div>';
     }
 
+    function cellHtml(label, list) {
+      var inner = !list.length ? '<span style="color:#9aa1ad;">\u2014</span>' : list.map(function (r) {
+        if (!r.url) return '<div style="color:#7a8290;font-size:14px;padding-top:6px;">Coming soon</div>';
+        return '<div style="margin-bottom:8px;"><a href="' + esc(r.url) + '" target="_blank" rel="noopener" class="res-dl" style="display:inline-block;background:#2f5d58;color:#fff;font-weight:600;font-size:14px;text-decoration:none;padding:8px 16px;white-space:nowrap;">Download \u203a</a>' +
+          (isNewItem(r) ? ' ' + NEWB : '') +
+          (r.added ? '<div style="font-size:12px;color:#7a8290;margin-top:4px;">Added ' + esc(fmtDate(r.added)) + '</div>' : '') + '</div>';
+      }).join('');
+      return '<div><span class="unit-cell-label">' + label + '</span>' + inner + '</div>';
+    }
+
+    function gridHtml(g) {
+      if (!g.unitList.length) return '';
+      return '<div class="unit-grid"><div class="unit-head"><div>Unit</div><div>Lecture Notes</div><div>Slides</div></div>' +
+        g.unitList.sort(function (a, b) { return a.first - b.first; }).map(function (u) {
+          return '<div class="unit-row"><div class="unit-name">' + esc(u.name) + '</div>' + cellHtml('Lecture Notes', u.notes) + cellHtml('Slides', u.slides) + '</div>';
+        }).join('') + '</div>';
+    }
+
     $('resRows').innerHTML = groups.map(function (name) {
-      var rows = byName[name];
+      var g = byName[name];
       return '<details open style="margin-bottom:16px;">' +
         '<summary style="cursor:pointer;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;color:#1c2430;padding:10px 2px;border-bottom:2px solid #b8862e;margin-bottom:12px;list-style:none;display:flex;align-items:center;gap:8px;">' +
-        '<span>' + esc(name) + '</span><span style="font-family:inherit;font-weight:600;font-size:13px;color:#5b6472;">(' + rows.length + ')</span></summary>' +
-        rows.map(rowHtml).join('') + '</details>';
+        '<span>' + esc(name) + '</span><span style="font-family:inherit;font-weight:600;font-size:13px;color:#5b6472;">(' + g.n + ')</span></summary>' +
+        g.rows.map(rowHtml).join('') + gridHtml(g) + '</details>';
     }).join('');
     $('resEmpty').hidden = groups.length > 0;
-    $('resCount').textContent = 'Showing ' + shown.length + ' of ' + ALL.length + ' resources';
+    $('resCount').textContent = 'Showing ' + shown.filter(function (r) { return r.url; }).length + ' of ' + LIVE.length + ' resources';
   }
   if ($('resRows')) {
     document.addEventListener('click', function (e) {
