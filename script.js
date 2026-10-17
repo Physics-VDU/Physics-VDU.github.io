@@ -93,7 +93,7 @@
     var q = state.q.trim().toLowerCase(), now = Date.now();
     var shown = ALL.filter(function (r) {
       return (state.type === 'All' || r.type === state.type) && (state.prog === 'All' || r.programme === state.prog) &&
-        (!q || [r.title, r.course, r.unit, r.type, r.programme, r.semester, r.year].join(' ').toLowerCase().indexOf(q) > -1);
+        (!q || [r.title, r.course, r.unit, r.unitTitle, r.type, r.programme, r.semester, r.year].join(' ').toLowerCase().indexOf(q) > -1);
     }).sort(function (a, b) { return (b.added || '').localeCompare(a.added || ''); });
 
     /* group by course; entries with a "unit" go into that course's Unit grid, the rest are normal rows */
@@ -107,8 +107,9 @@
       if (r.url) g.n++;
       if (!isUnit) { g.rows.push(r); return; }
       var u = g.units[r.unit];
-      if (!u) { u = g.units[r.unit] = { name: r.unit, notes: [], slides: [], first: r._i }; g.unitList.push(u); }
+      if (!u) { u = g.units[r.unit] = { name: r.unit, title: '', notes: [], slides: [], first: r._i }; g.unitList.push(u); }
       u.first = Math.min(u.first, r._i);
+      if (!u.title && r.unitTitle) u.title = r.unitTitle;
       (r.type === 'Lecture Notes' ? u.notes : u.slides).push(r);
     });
 
@@ -143,7 +144,7 @@
       if (!g.unitList.length) return '';
       return '<div class="unit-grid"><div class="unit-head"><div>Unit</div><div>Lecture Notes</div><div>Slides</div></div>' +
         g.unitList.sort(function (a, b) { return a.first - b.first; }).map(function (u) {
-          return '<div class="unit-row"><div class="unit-name">' + esc(u.name) + '</div>' + cellHtml('Lecture Notes', u.notes) + cellHtml('Slides', u.slides) + '</div>';
+          return '<div class="unit-row"><div class="unit-name">' + esc(u.name) + (u.title ? ' <span style="font-family:\'Source Sans 3\',sans-serif;font-weight:500;font-size:14.5px;color:#5b6472;">\u2013 ' + esc(u.title) + '</span>' : '') + '</div>' + cellHtml('Lecture Notes', u.notes) + cellHtml('Slides', u.slides) + '</div>';
         }).join('') + '</div>';
     }
 
