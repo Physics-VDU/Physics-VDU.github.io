@@ -1,11 +1,11 @@
 // STUDY RESOURCES - add one line per file (newest anywhere in the list; the site sorts by "added").
 //   course: groups rows under one heading (e.g. "Foundations of Physical Sciences in IKS"). Leave "" for ungrouped (shown under "General").
-//   type: Syllabus | Time Table | Question Papers | Lecture Notes | Slides | Assignments & Labs
+//   type: Syllabus | Time Table | Question Papers | Lecture Notes | Slides | Model Q&A | Assignments & Labs
 //   programme: B.Sc. (Hons) | M.Sc.      semester / year / deadline: optional (leave "" if none)
 //   added: YYYY-MM-DD  (items added in the last 30 days get a "New" badge)
 //   url: the Google Drive "Anyone with the link can view" address
-//   unit: (optional) for Lecture Notes / Slides only. Rows with the same course + unit appear together in one "Unit" grid,
-//         with Lecture Notes and Slides side by side. Each file shows its "added" date in small grey text.
+//   unit: (optional) for Lecture Notes / Slides / Model Q&A only. Rows with the same course + unit appear together in one "Unit" grid,
+//         with Lecture Notes, Slides and Model Q&A (for practice) side by side. Each file shows its "added" date in small grey text.
 //         Leave url "" to show "Coming soon" in that cell (then fill in url and added when the file is ready).
 //         Unit rows appear in the order they are listed in this file.
 //   unitTitle: (optional) the unit's topic, shown next to the unit name (give the same text on every line of that unit).
@@ -26,6 +26,11 @@ window.RESOURCES = [
   {"title": "Unit 3 - Slides", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 3", "unitTitle": "Indian Astronomy and Celestial Mechanics", "type": "Slides", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/1zzd6lSDjRtq2wJFFK0onekZXZe65a8Ar/view?usp=sharing", "added": "2026-10-17"},
   {"title": "Unit 4 - Lecture Notes", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 4", "unitTitle": "Development of Materials Science and Modern Physics in India", "type": "Lecture Notes", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/1NroM2PmJmaNbEOUub7Hqlhfe8x0FgkWt/view?usp=sharing", "added": "2026-10-17"},
   {"title": "Unit 4 - Slides", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 4", "unitTitle": "Development of Materials Science and Modern Physics in India", "type": "Slides", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
+  {"title": "Unit 1, Part 1 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 1, Part 1", "unitTitle": "Epistemology of Science", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
+  {"title": "Unit 1, Part 2 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 1, Part 2", "unitTitle": "Ancient Indian Atomism", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
+  {"title": "Unit 2 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 2", "unitTitle": "Observational Frameworks, Time Measurement and Calendrics", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
+  {"title": "Unit 3 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 3", "unitTitle": "Indian Astronomy and Celestial Mechanics", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
+  {"title": "Unit 4 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 4", "unitTitle": "Development of Materials Science and Modern Physics in India", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
   {"title": "Homework", "course": "Quantum Mechanics and Application", "type": "Assignments & Labs", "programme": "B.Sc. (Hons)", "semester": "", "year": "", "deadline": "3 Oct 2026", "url": "https://drive.google.com/file/d/1O1iSHDztxwCg9Vq0i9yhDfaZaMNVoS93/view?usp=sharing", "added": "2026-09-29"}
 ];
 

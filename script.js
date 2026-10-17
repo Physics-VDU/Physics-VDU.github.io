@@ -53,7 +53,7 @@
   var ALL = window.RESOURCES || [];
   ALL.forEach(function (r, i) { r._i = i; });
   var LIVE = ALL.filter(function (r) { return r.url; });   /* entries with a link; empty url = "Coming soon" placeholder */
-  var TYPES = ['All', 'Syllabus', 'Time Table', 'Question Papers', 'Lecture Notes', 'Slides', 'Assignments & Labs'];
+  var TYPES = ['All', 'Syllabus', 'Time Table', 'Question Papers', 'Lecture Notes', 'Slides', 'Model Q&A', 'Assignments & Labs'];
   var PROGS = ['All', 'B.Sc. (Hons)', 'M.Sc.'];
   var state = { type: 'All', prog: 'All', q: '' };
   var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -68,7 +68,7 @@
     st.id = 'unitCss';
     st.textContent =
       '.unit-grid{border:1px solid #ddd6c4;background:#fbf9f3;margin-bottom:10px;}' +
-      '.unit-head,.unit-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:8px 16px;align-items:start;padding:14px 18px;}' +
+      '.unit-head,.unit-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:8px 16px;align-items:start;padding:14px 18px;}' +
       '.unit-head{align-items:center;font-size:13px;font-weight:700;color:#5b6472;border-bottom:1.5px solid #1c2430;padding-top:10px;padding-bottom:10px;}' +
       '.unit-row{border-bottom:1px solid #ddd6c4;}' +
       '.unit-row:last-child{border-bottom:0;}' +
@@ -99,7 +99,7 @@
     /* group by course; entries with a "unit" go into that course's Unit grid, the rest are normal rows */
     var groups = [], byName = {};
     shown.forEach(function (r) {
-      var isUnit = !!r.unit && (r.type === 'Lecture Notes' || r.type === 'Slides');
+      var isUnit = !!r.unit && (r.type === 'Lecture Notes' || r.type === 'Slides' || r.type === 'Model Q&A');
       if (!isUnit && !r.url) return;
       var name = r.course || 'General';
       if (!byName[name]) { byName[name] = { rows: [], units: {}, unitList: [], n: 0 }; groups.push(name); }
@@ -107,10 +107,10 @@
       if (r.url) g.n++;
       if (!isUnit) { g.rows.push(r); return; }
       var u = g.units[r.unit];
-      if (!u) { u = g.units[r.unit] = { name: r.unit, title: '', notes: [], slides: [], first: r._i }; g.unitList.push(u); }
+      if (!u) { u = g.units[r.unit] = { name: r.unit, title: '', notes: [], slides: [], qa: [], first: r._i }; g.unitList.push(u); }
       u.first = Math.min(u.first, r._i);
       if (!u.title && r.unitTitle) u.title = r.unitTitle;
-      (r.type === 'Lecture Notes' ? u.notes : u.slides).push(r);
+      (r.type === 'Lecture Notes' ? u.notes : r.type === 'Slides' ? u.slides : u.qa).push(r);
     });
 
     /* ungrouped items (e.g. the Class Time Table) always come first */
@@ -142,9 +142,9 @@
 
     function gridHtml(g) {
       if (!g.unitList.length) return '';
-      return '<div class="unit-grid"><div class="unit-head"><div>Unit</div><div>Lecture Notes</div><div>Slides</div></div>' +
+      return '<div class="unit-grid"><div class="unit-head"><div>Unit</div><div>Lecture Notes</div><div>Slides</div><div>Model Q&amp;A for Practice</div></div>' +
         g.unitList.sort(function (a, b) { return a.first - b.first; }).map(function (u) {
-          return '<div class="unit-row"><div class="unit-name">' + esc(u.name) + (u.title ? ' <span style="font-family:\'Source Sans 3\',sans-serif;font-weight:500;font-size:14.5px;color:#5b6472;">\u2013 ' + esc(u.title) + '</span>' : '') + '</div>' + cellHtml('Lecture Notes', u.notes) + cellHtml('Slides', u.slides) + '</div>';
+          return '<div class="unit-row"><div class="unit-name">' + esc(u.name) + (u.title ? ' <span style="font-family:\'Source Sans 3\',sans-serif;font-weight:500;font-size:14.5px;color:#5b6472;">\u2013 ' + esc(u.title) + '</span>' : '') + '</div>' + cellHtml('Lecture Notes', u.notes) + cellHtml('Slides', u.slides) + cellHtml('Model Q&amp;A for Practice', u.qa) + '</div>';
         }).join('') + '</div>';
     }
 
