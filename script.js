@@ -112,6 +112,9 @@
       (r.type === 'Lecture Notes' ? u.notes : u.slides).push(r);
     });
 
+    /* ungrouped items (e.g. the Class Time Table) always come first */
+    groups.sort(function (a, b) { return (a === 'General' ? 0 : 1) - (b === 'General' ? 0 : 1); });
+
     function isNewItem(r) { return r.added && (now - new Date(r.added).getTime()) < 30 * 86400000; }
     var NEWB = '<span style="font-weight:700;font-size:12px;color:#1c1404;background:#d9ab5c;padding:2px 9px;border-radius:2px;">New</span>';
 
@@ -126,9 +129,10 @@
     }
 
     function cellHtml(label, list) {
+      list = list.slice().sort(function (a, b) { return a._i - b._i; });   /* same unit + type: stack in the order listed in data.js */
       var inner = !list.length ? '<span style="color:#9aa1ad;">\u2014</span>' : list.map(function (r) {
         if (!r.url) return '<div style="color:#7a8290;font-size:14px;padding-top:6px;">Coming soon</div>';
-        return '<div style="margin-bottom:8px;"><a href="' + esc(r.url) + '" target="_blank" rel="noopener" class="res-dl" style="display:inline-block;background:#2f5d58;color:#fff;font-weight:600;font-size:14px;text-decoration:none;padding:8px 16px;white-space:nowrap;">Download \u203a</a>' +
+        return '<div style="margin-bottom:10px;">' + (list.length > 1 && r.version ? '<div style="font-size:12.5px;font-weight:600;color:#5b6472;margin-bottom:3px;">' + esc(r.version) + '</div>' : '') + '<a href="' + esc(r.url) + '" target="_blank" rel="noopener" class="res-dl" style="display:inline-block;background:#2f5d58;color:#fff;font-weight:600;font-size:14px;text-decoration:none;padding:8px 16px;white-space:nowrap;">Download \u203a</a>' +
           (isNewItem(r) ? ' ' + NEWB : '') +
           (r.added ? '<div style="font-size:12px;color:#7a8290;margin-top:4px;">Added ' + esc(fmtDate(r.added)) + '</div>' : '') + '</div>';
       }).join('');
