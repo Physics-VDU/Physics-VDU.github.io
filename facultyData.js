@@ -82,7 +82,7 @@ const FACULTY = {
       </ul>`,
       membership: "Reviewer, Elsevier journal <em>Vacuum</em>.",
       experience: `<ul>
-        <li>Guest faculty (Assistant Professor), Department of Physics, Vikram Dev University, Jeypore, Odisha (Jan 2026 &ndash; Present).</li>
+        <li>Guest faculty (Assistant Professor), Department of Physics, Vikram Dev University, Jayapur, Odisha (Jan 2026 &ndash; Present).</li>
         <li>Guest lecturer, Department of Physics, Model Degree College, Boudh, Odisha (July 2025 &ndash; Jan 2026).</li>
       </ul>`
     }
@@ -214,14 +214,14 @@ const FACULTY = {
     sections: { research: "Density Functional Theory, Electronic Spin Transport, NEGF, 2D Materials." }
   },
   "bikash-chandra-swain": {
-    card: {"researchFocus": "Single-Molecule Biophysics, IDPs, smFRET, FCS, LLPS"},
+    card: {"researchFocus": "Single-Molecule Biophysics"},
     name: "Dr. Bikash Chandra Swain, PhD", initials: "BS", role: "Assistant Professor (Guest Faculty)", spec: "",
     phone: "9438763890", emails: [],
     links: [
       { label: "Google Scholar profile", url: "https://scholar.google.com/citations?user=85MmpgkAAAAJ&hl=en" },
       { label: "Personal website", url: "https://bikashbiophy.github.io/Webpage/" }
     ], cv: "cv/bikash-chandra-swain.pdf", avatarSrc: "assets/bikash-chandra-swain.jpg",
-    sections: { research: "Single-Molecule Biophysics, IDPs, smFRET, FCS, LLPS." }
+    sections: { research: "Single-Molecule Biophysics." }
   },
   "paresh-samal": {
     card: {"role": "Laboratory Assistant-cum-Storekeeper"},
