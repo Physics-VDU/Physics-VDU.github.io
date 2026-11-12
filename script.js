@@ -74,10 +74,15 @@
       '.unit-row:last-child{border-bottom:0;}' +
       '.unit-name{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16.5px;line-height:1.3;padding-top:6px;}' +
       '.unit-cell-label{display:none;}' +
+      '.tt-embed{border:1px solid #ddd6c4;background:#fbf9f3;margin:-2px 0 12px;padding:10px;}' +
+      '.tt-embed iframe{display:block;width:100%;height:560px;border:0;background:#fff;}' +
+      '.tt-embed p{margin:8px 2px 0;font-size:13.5px;color:#5b6472;}' +
       '@media (max-width:760px){.unit-head{display:none;}.unit-row{grid-template-columns:1fr 1fr;padding:14px;}.unit-name{grid-column:1/-1;padding-top:0;}' +
-      '.unit-cell-label{display:block;font-size:12.5px;font-weight:600;color:#5b6472;margin-bottom:5px;}}';
+      '.unit-cell-label{display:block;font-size:12.5px;font-weight:600;color:#5b6472;margin-bottom:5px;}.tt-embed{padding:6px;}.tt-embed iframe{height:420px;}}';
     document.head.appendChild(st);
   }
+
+  function driveId(u) { var m = /\/file\/d\/([^\/?#]+)/.exec(u || ''); return m ? m[1] : ''; }
 
   function chip(label, active, size, pad, key, val) {
     return '<button data-k="' + key + '" data-v="' + esc(val) + '" style="font:inherit;font-size:' + size + 'px;font-weight:600;cursor:pointer;padding:' + pad + ';border-radius:999px;border:1.5px solid ' + (active ? '#141d33' : '#c9c1ab') + ';background:' + (active ? '#141d33' : 'transparent') + ';color:' + (active ? '#fff' : '#1c2430') + ';">' + esc(label) + '</button>';
@@ -121,12 +126,15 @@
 
     function rowHtml(r) {
       var meta = [r.programme, r.semester, r.year, r.deadline ? 'Deadline: ' + r.deadline : ''].filter(Boolean).join(' \u00b7 ');
+      var did = r.type === 'Time Table' ? driveId(r.url) : '';
+      var embed = did ? '<div class="tt-embed"><iframe src="https://drive.google.com/file/d/' + esc(did) + '/preview" title="' + esc(r.title) + '" loading="lazy" allow="autoplay"></iframe>' +
+        '<p>Not loading, or too small to read? <a href="' + esc(r.url) + '" target="_blank" rel="noopener" style="color:#2f5d58;font-weight:600;text-decoration:none;">Open the time table in a new tab \u203a</a></p></div>' : '';
       return '<div class="res-row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 20px;align-items:center;padding:16px 18px;border:1px solid #ddd6c4;background:#fbf9f3;margin-bottom:10px;"><div>' +
         '<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px;"><span style="font-weight:700;font-size:12px;color:#2f5d58;background:#e4eeec;padding:2px 9px;border-radius:2px;">' + esc(r.type) + '</span>' +
         (isNewItem(r) ? NEWB : '') + '</div>' +
         '<div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17px;line-height:1.3;">' + esc(r.title) + '</div>' +
         '<div style="color:#5b6472;font-size:14px;margin-top:3px;">' + esc(meta) + '</div></div>' +
-        '<a href="' + esc(r.url) + '" target="_blank" rel="noopener" class="res-dl" style="background:#2f5d58;color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;padding:10px 18px;white-space:nowrap;">Download \u203a</a></div>';
+        '<a href="' + esc(r.url) + '" target="_blank" rel="noopener" class="res-dl" style="background:#2f5d58;color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;padding:10px 18px;white-space:nowrap;">Download \u203a</a></div>' + embed;
     }
 
     function cellHtml(label, list) {
@@ -167,6 +175,13 @@
     });
     $('resQuery').addEventListener('input', function (e) { state.q = e.target.value; renderResources(); });
     renderResources();
+  }
+
+  /* ---------- seminar registration form ---------- */
+  var SF = window.SEMINAR_FORM || '';
+  if ($('seminarForm') && SF) {
+    $('seminarForm').innerHTML = '<a href="' + esc(SF) + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;background:#2f5d58;color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;padding:10px 18px;">Register to present \u203a</a>' +
+      '<p style="color:#5b6472;font-size:13.5px;margin:8px 0 0;">Want to present? Fill this short Google Form to register for a seminar slot.</p>';
   }
 
   /* ---------- gallery slideshow ---------- */

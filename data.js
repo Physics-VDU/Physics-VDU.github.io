@@ -4,6 +4,7 @@
 //   programme: B.Sc. (Hons) | M.Sc.      semester / year / deadline: optional (leave "" if none)
 //   added: YYYY-MM-DD  (items added in the last 30 days get a "New" badge)
 //   url: the Google Drive "Anyone with the link can view" address
+//        (a Time Table row is also shown in full on the page, inside a viewer, as well as being downloadable)
 //   unit: (optional) for Lecture Notes / Slides / Model Q&A only. Rows with the same course + unit appear together in one "Unit" grid,
 //         with Lecture Notes, Slides and Model Q&A (for practice) side by side. Each file shows its "added" date in small grey text.
 //         Leave url "" to show "Coming soon" in that cell (then fill in url and added when the file is ready).
@@ -28,7 +29,7 @@ window.RESOURCES = [
   {"title": "Unit 4 - Slides", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 4", "unitTitle": "Development of Materials Science and Modern Physics in India", "type": "Slides", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
   {"title": "Unit 1, Part 1 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 1, Part 1", "unitTitle": "Epistemology of Science", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/1_hAWry0WB7yMwbswRkxWFHLo7tmhepgE/view?usp=sharing", "added": "2026-10-18"},
   {"title": "Unit 1, Part 2 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 1, Part 2", "unitTitle": "Ancient Indian Atomism", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/1dTSXwiwGH3OxamBydFQ62jqUfG1PCHKv/view?usp=sharing", "added": "2026-10-18"},
-  {"title": "Unit 2 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 2", "unitTitle": "Observational Frameworks, Time Measurement and Calendrics", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
+  {"title": "Unit 2 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 2", "unitTitle": "Observational Frameworks, Time Measurement and Calendrics", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "https://drive.google.com/file/d/1yeABLCRGDW7s_3dUaMzhEW4jfP6E38Gi/view?usp=sharing", "added": "2026-11-11"},
   {"title": "Unit 3 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 3", "unitTitle": "Indian Astronomy and Celestial Mechanics", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
   {"title": "Unit 4 - Model Q&A", "course": "Foundations of Physical Sciences in IKS (P105)", "unit": "Unit 4", "unitTitle": "Development of Materials Science and Modern Physics in India", "type": "Model Q&A", "programme": "M.Sc.", "semester": "1st Year", "year": "", "url": "", "added": ""},
   {"title": "Homework", "course": "Quantum Mechanics and Application", "type": "Assignments & Labs", "programme": "B.Sc. (Hons)", "semester": "", "year": "", "deadline": "3 Oct 2026", "url": "https://drive.google.com/file/d/1O1iSHDztxwCg9Vq0i9yhDfaZaMNVoS93/view?usp=sharing", "added": "2026-09-29"}
@@ -46,3 +47,7 @@ window.SLIDES = [
   {"img": "assets/teachers-day-2.jpg", "caption": "Teachers Day 2026"},
   {"img": "assets/ganesh-chaturthi.jpg", "caption": "Ganesh Chaturthi 2026 at Department", "objectPosition": "top"}
 ];
+
+// SEMINAR REGISTRATION FORM - paste the Google Form link between the quotes.
+// While it is empty, nothing is shown. Once filled, a "Register to present" button appears under "Student Seminars".
+window.SEMINAR_FORM = "";

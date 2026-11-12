@@ -13,24 +13,46 @@ body{margin:0;background:#f6f2e8;color:#1c2430;font-family:"Source Sans 3",-appl
     .site-nav{gap:6px 14px !important;}
     .site-nav a{white-space:nowrap;transition:color .15s,border-color .15s;}
     .site-nav a:hover{color:#fff !important;border-bottom-color:#d9ab5c !important;}
+    body{overflow-wrap:break-word;}
     @media (max-width:760px){
-      section[id],main[id]{scroll-margin-top:64px;}
+      section[id],main[id]{scroll-margin-top:112px;}
       .site-header .hdr-inner{padding:8px 14px !important;gap:6px !important;}
-      .site-nav{width:100%;flex-wrap:nowrap !important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:16px !important;}
+      .site-nav{width:100%;flex-wrap:nowrap !important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:16px !important;padding-right:28px;-webkit-mask-image:linear-gradient(to right,#000 88%,transparent);mask-image:linear-gradient(to right,#000 88%,transparent);}
       .site-nav::-webkit-scrollbar{display:none;}
-      .site-nav a{flex-shrink:0;}
-      .site-nav a{padding-top:10px !important;padding-bottom:10px !important;}
-      main > section{padding-top:36px !important;padding-bottom:36px !important;}
-      main > section > div,footer > div{padding-left:16px !important;padding-right:16px !important;}
+      .site-nav a{flex-shrink:0;padding-top:10px !important;padding-bottom:10px !important;}
+      .ticker-inner{padding:7px 14px !important;gap:10px !important;}
+      .ticker-inner [style*="margin-right:60px"]{font-size:13.5px !important;}
+      section{padding-top:36px !important;padding-bottom:36px !important;}
+      section > div,footer > div{padding-left:16px !important;padding-right:16px !important;}
       main > section:first-child{padding-top:32px !important;padding-bottom:32px !important;}
       main > section:first-child > div{gap:24px !important;}
-      main h2{font-size:26px !important;}
-      main > section p{font-size:16px !important;}
+      section h2{font-size:26px !important;}
       .hero-ctas{flex-direction:column;gap:10px !important;}
       .hero-ctas a{display:block !important;text-align:center;padding:13px 18px !important;}
       .hero-art{max-width:240px !important;}
+      /* head of department card */
+      .hod-card{grid-template-columns:1fr !important;padding:20px !important;gap:18px !important;}
+      /* programmes + achievements tables become stacked cards */
+      .prog-table,.ach-table{min-width:0 !important;}
+      .prog-table thead,.ach-table thead{display:none;}
+      .prog-table,.prog-table tbody,.prog-table tr,.ach-table,.ach-table tbody,.ach-table tr{display:block;width:100%;}
+      .prog-table tr,.ach-table tr[style]{border:1px solid #ddd6c4 !important;background:#fbf9f3;margin-bottom:12px;padding:4px 14px;}
+      .prog-table td,.ach-table td[data-label]{display:flex !important;justify-content:space-between;align-items:baseline;gap:16px;padding:8px 0 !important;border-bottom:1px solid #ece6d6 !important;text-align:right;}
+      .prog-table td:last-child,.ach-table td[data-label]:last-child{border-bottom:0 !important;}
+      .prog-table td::before,.ach-table td[data-label]::before{content:attr(data-label);color:#5b6472;font-size:13px;font-weight:600;text-align:left;flex-shrink:0;}
+      .ach-table tr:not([style]){border:0;background:none;padding:0;margin:0;}
+      .ach-group{display:block !important;font-size:16px;padding:18px 0 8px !important;}
+      /* past seminars */
+      .sem-item{grid-template-columns:1fr !important;gap:4px !important;}
+      /* resources */
       .res-row{grid-template-columns:1fr !important;padding:14px !important;}
       .res-dl{display:block !important;text-align:center;}
+      button[data-k]{min-height:40px;}
+      #resQuery{max-width:none !important;font-size:16px !important;}
+      /* gallery */
+      #slideItems img{height:260px !important;}
+      #prevSlide{left:6px !important;}
+      #nextSlide{right:6px !important;}
       .alumni-frame{height:620px !important;}
       img,iframe,svg{max-width:100%;}
     }
@@ -39,4 +61,4 @@ body{margin:0;background:#f6f2e8;color:#1c2430;font-family:"Source Sans 3",-appl
 .acc-body ul,.acc-body ol{padding-left:22px;margin:6px 0;}
 .acc-body li{margin:4px 0;}
 .acc-body table td{vertical-align:top;}
-
+.acc-body table{display:block;overflow-x:auto;}
