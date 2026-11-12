@@ -49,5 +49,5 @@ window.SLIDES = [
 ];
 
 // SEMINAR REGISTRATION FORM - paste the Google Form link between the quotes.
-// While it is empty, nothing is shown. Once filled, a "Register to present" button appears under "Student Seminars".
-window.SEMINAR_FORM = "";
+// While it is empty, nothing is shown. Once filled, a "Register to give a talk" button appears under "Student Seminars".
+window.SEMINAR_FORM = "https://docs.google.com/forms/d/1781gSBEr_DGqn0pGsjHB4YU9dqxHqxUWZY0ythMUBwM/viewform";

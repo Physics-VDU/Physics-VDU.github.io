@@ -180,8 +180,8 @@
   /* ---------- seminar registration form ---------- */
   var SF = window.SEMINAR_FORM || '';
   if ($('seminarForm') && SF) {
-    $('seminarForm').innerHTML = '<a href="' + esc(SF) + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;background:#2f5d58;color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;padding:10px 18px;">Register to present \u203a</a>' +
-      '<p style="color:#5b6472;font-size:13.5px;margin:8px 0 0;">Want to present? Fill this short Google Form to register for a seminar slot.</p>';
+    $('seminarForm').innerHTML = '<a href="' + esc(SF) + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;background:#2f5d58;color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;padding:10px 18px;">Register to give a talk \u203a</a>' +
+      '<p style="color:#5b6472;font-size:13.5px;margin:8px 0 0;">Want to give a talk? Fill this short Google Form to register for the Friday seminar.</p>';
   }
 
   /* ---------- gallery slideshow ---------- */
