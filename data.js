@@ -45,7 +45,8 @@ window.SLIDES = [
   {"img": "assets/seminar-presenter.jpg", "caption": "Departmental Seminar — 18 Sep 2026"},
   {"img": "assets/teachers-day-1.jpg", "caption": "Teachers Day 2026"},
   {"img": "assets/teachers-day-2.jpg", "caption": "Teachers Day 2026"},
-  {"img": "assets/ganesh-chaturthi.jpg", "caption": "Ganesh Chaturthi 2026 at Department", "objectPosition": "top"}
+  {"img": "assets/ganesh-chaturthi.jpg", "caption": "Ganesh Chaturthi 2026 at Department", "objectPosition": "top"},
+  {"img": "assets/ug-5th-minor-students.jpg", "caption": "UG 5th Minor Students"}
 ];
 
 // SEMINAR REGISTRATION FORM - paste the Google Form link between the quotes.
