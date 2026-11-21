@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study resources - Department of Physics - Vikram Dev University, Jayapur</title>
+<meta name="description" content="Class time table, syllabus, question papers, notes and slides for physics students, Vikram Dev University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="site-header"></div>
+<script src="data.js"></script>
+<script src="layout.js"></script>
+<main id="top">
+<section id="resources" style="padding:56px 0;border-top:1px solid #ddd6c4;">
+    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
+      <div style="max-width:60ch;margin-bottom:28px;">
+        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">For students</div>
+        <h2 style="font-size:clamp(26px,3.4vw,36px);">Study resources</h2>
+        <p style="color:#5b6472;font-size:17px;margin:0;">Previous year question papers, lecture notes, slides and more — free to download. The newest uploads are listed first and marked “New”.</p>
+      </div>
+
+      <div id="resSignpost"></div>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:20px;">
+        <input type="search" placeholder="Search by subject, semester or year…" aria-label="Search study resources" id="resQuery" style="width:100%;max-width:520px;box-sizing:border-box;padding:12px 14px;font:inherit;font-size:15.5px;border:1.5px solid #ddd6c4;background:#fbf9f3;color:#1c2430;border-radius:2px;">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <div id="resTypeChips" style="display:contents"></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+          <span style="color:#5b6472;font-size:13.5px;margin-right:4px;">Programme:</span>
+          <div id="resProgChips" style="display:contents"></div>
+        </div>
+      </div>
+
+      <p id="resCount" style="color:#5b6472;font-size:14px;margin:0 0 14px;"></p>
+
+      <div id="resRows" style="display:contents"></div>
+
+      <div id="resEmpty" hidden>
+        <div style="border:1px dashed #b9b19b;padding:28px;color:#5b6472;font-size:15.5px;">Nothing matches your search yet. Try another keyword or choose “All”.</div>
+      </div>
+
+      <p style="margin-top:20px;color:#5b6472;font-size:14px;">Can’t find a paper or notes you need? Write to <a href="mailto:vdu.physics@gmail.com" style="color:#2f5d58;font-weight:600;text-decoration:none;">vdu.physics@gmail.com</a> and we’ll try to add it.</p>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="facultyData.js"></script>
+<script src="resources.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -9,55 +9,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script>
+/* old links such as /#resources keep working: send them to the right page */
+(function(){var m={about:'about.html',facilities:'about.html#facilities',programmes:'programmes.html',resources:'resources.html',faculty:'faculty.html',research:'faculty.html#research',activities:'student-life.html#activities',achievements:'student-life.html#achievements',gallery:'student-life.html#gallery',notices:'news.html',alumni:'alumni-contact.html#alumni',contact:'alumni-contact.html#contact'};
+var h=location.hash.replace('#','');if(m[h])location.replace(m[h]);})();
+</script>
 </head>
 <body>
-<div style="max-width:1400px;margin:0 auto;">
-
-<!-- HEADER -->
-<header class="site-header" style="background:#141d33;color:#eef1f6;border-bottom:1px solid #33405e;">
-  <div class="hdr-inner" style="max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
-    <a href="#top" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
-      <span style="width:44px;height:44px;border-radius:50%;border:1.5px solid #d9ab5c;background:#fbf9f3;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;">
-        <img src="assets/logo.jpg" alt="Vikram Dev University logo" style="width:100%;height:100%;object-fit:cover;">
-      </span>
-      <span style="line-height:1.25;">
-        <span style="display:block;font-size:12.5px;letter-spacing:0.02em;color:#b8c0d4;">Vikram Dev University, Jayapur</span>
-        <span style="display:block;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;">Department of Physics</span>
-      </span>
-    </a>
-    <nav class="site-nav" style="display:flex;gap:20px;flex-wrap:wrap;row-gap:6px;">
-      <a href="#top" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Home</a>
-      <a href="#about" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">About</a>
-      <a href="#programmes" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Programmes</a>
-      <a href="#resources" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Resources</a>
-      <a href="#faculty" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Faculty &amp; Staff</a>
-      <a href="#research" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Research</a>
-      <a href="#facilities" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Facilities</a>
-      <a href="#activities" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Activities</a>
-      <a href="#alumni" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Alumni</a>
-      <a href="#achievements" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Achievements</a>
-      <a href="#notices" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">News</a>
-      <a href="#contact" style="color:#c7cede;text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid transparent;">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- ALERT TICKER -->
-<div style="background:#2f5d58;color:#eaf3f1;overflow:hidden;position:relative;border-bottom:1px solid #33405e;">
-  <div class="ticker-inner" style="max-width:1140px;margin:0 auto;padding:9px 24px;display:flex;align-items:center;gap:14px;">
-    <span style="flex-shrink:0;font-weight:700;font-size:12.5px;letter-spacing:0.02em;background:#b8862e;color:#1c1404;padding:3px 10px;border-radius:2px;">Alerts</span>
-    <div style="overflow:hidden;flex:1;min-width:0;white-space:nowrap;">
-      <div style="display:inline-block;animation:marquee 60s linear infinite;">
-        <span style="margin-right:60px;font-size:14.5px;"><a href="#resources" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">Student resources</a> — question papers, notes &amp; slides</span><span style="margin-right:60px;font-size:14.5px;"><a href="https://www.indapt.org/national-graduate-physics-examination-ngpe" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">NGPE 2027</a> — poster &amp; brochure out on the IAPT site</span><span style="margin-right:60px;font-size:14.5px;"><a href="https://physics.iisc.ac.in/events-all/schools/winter-school/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">IISc Online Winter School</a> — 14–18 Dec 2026, register by 1 Dec</span><span style="margin-right:60px;font-size:14.5px;"><a href="#resources" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">Student resources</a> — question papers, notes &amp; slides</span><span style="margin-right:60px;font-size:14.5px;"><a href="https://www.indapt.org/national-graduate-physics-examination-ngpe" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">NGPE 2027</a> — poster &amp; brochure out on the IAPT site</span><span style="margin-right:60px;font-size:14.5px;"><a href="https://physics.iisc.ac.in/events-all/schools/winter-school/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">IISc Online Winter School</a> — 14–18 Dec 2026, register by 1 Dec</span><span style="margin-right:60px;font-size:14.5px;"><a href="#resources" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">Student resources</a> — question papers, notes &amp; slides</span><span style="margin-right:60px;font-size:14.5px;"><a href="https://www.indapt.org/national-graduate-physics-examination-ngpe" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">NGPE 2027</a> — poster &amp; brochure out on the IAPT site</span><span style="margin-right:60px;font-size:14.5px;"><a href="https://physics.iisc.ac.in/events-all/schools/winter-school/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">IISc Online Winter School</a> — 14–18 Dec 2026, register by 1 Dec</span><span style="margin-right:60px;font-size:14.5px;"><a href="#resources" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">Student resources</a> — question papers, notes &amp; slides</span><span style="margin-right:60px;font-size:14.5px;"><a href="https://www.indapt.org/national-graduate-physics-examination-ngpe" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">NGPE 2027</a> — poster &amp; brochure out on the IAPT site</span><span style="margin-right:60px;font-size:14.5px;"><a href="https://physics.iisc.ac.in/events-all/schools/winter-school/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">IISc Online Winter School</a> — 14–18 Dec 2026, register by 1 Dec</span>
-      </div>
-    </div>
-  </div>
-</div>
-
+<div id="site-header"></div>
+<script src="data.js"></script>
+<script src="layout.js"></script>
 <main id="top">
-
-  <!-- HERO -->
-  <section style="background:#141d33;padding:64px 0;">
+<section style="background:#141d33;padding:64px 0;">
     <div style="max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:center;">
       <div>
         <div style="color:#d9ab5c;font-size:15px;margin-bottom:14px;font-weight:600;">Vikram Dev University · Jayapur, Koraput, Odisha</div>
@@ -65,9 +28,9 @@
         <p style="color:#c7cede;font-size:18px;max-width:42ch;margin:0 0 18px;">Rigorous teaching and hands-on enquiry into the laws that govern matter and energy — serving students of Koraput and the wider undivided Koraput district.</p>
         <p style="font-style:italic;color:#98a3bd;font-size:14.5px;border-left:2px solid #b8862e;padding-left:12px;margin:0 0 24px;">तमसो मा ज्योतिर्गमय — “From darkness, lead me to light,” the university's founding motto.</p>
         <div class="hero-ctas" style="display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="#programmes" style="display:inline-block;padding:12px 22px;font-weight:600;font-size:15px;text-decoration:none;border-radius:2px;background:#b8862e;color:#1c1404;">View programmes</a>
-          <a href="#resources" style="display:inline-block;padding:12px 22px;font-weight:600;font-size:15px;text-decoration:none;border-radius:2px;border:1.5px solid #d9ab5c;color:#d9ab5c;">Student resources</a>
-          <a href="#contact" style="display:inline-block;padding:12px 22px;font-weight:600;font-size:15px;text-decoration:none;border-radius:2px;border:1.5px solid #5c6785;color:#eef1f6;">Get in touch</a>
+          <a href="programmes.html" style="display:inline-block;padding:12px 22px;font-weight:600;font-size:15px;text-decoration:none;border-radius:2px;background:#b8862e;color:#1c1404;">View programmes</a>
+          <a href="resources.html" style="display:inline-block;padding:12px 22px;font-weight:600;font-size:15px;text-decoration:none;border-radius:2px;border:1.5px solid #d9ab5c;color:#d9ab5c;">Student resources</a>
+          <a href="alumni-contact.html#contact" style="display:inline-block;padding:12px 22px;font-weight:600;font-size:15px;text-decoration:none;border-radius:2px;border:1.5px solid #5c6785;color:#eef1f6;">Get in touch</a>
         </div>
       </div>
       <div class="hero-art" style="width:100%;max-width:420px;margin:0 auto;">
@@ -90,585 +53,60 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" style="padding:56px 0;border-top:1px solid #ddd6c4;">
+  <!-- QUICK LINKS -->
+  <section style="padding:56px 0;border-top:1px solid #ddd6c4;">
     <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:start;">
+      <div style="max-width:56ch;margin-bottom:24px;">
+        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Quick links</div>
+        <h2 style="font-size:clamp(26px,3.4vw,36px);margin-bottom:0;">Find what you need</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-bottom:28px;"><a href="resources.html" style="display:block;border:1px solid #ddd6c4;border-top:3px solid #b8862e;background:#fbf9f3;padding:18px 20px;text-decoration:none;color:#1c2430;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;margin-bottom:4px;">Study resources</div><div style="color:#5b6472;font-size:14.5px;">Notes, slides and question papers</div></a><a href="resources.html" style="display:block;border:1px solid #ddd6c4;border-top:3px solid #b8862e;background:#fbf9f3;padding:18px 20px;text-decoration:none;color:#1c2430;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;margin-bottom:4px;">Class time table</div><div style="color:#5b6472;font-size:14.5px;">View the time table online</div></a><a href="programmes.html" style="display:block;border:1px solid #ddd6c4;border-top:3px solid #b8862e;background:#fbf9f3;padding:18px 20px;text-decoration:none;color:#1c2430;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;margin-bottom:4px;">Programmes &amp; syllabus</div><div style="color:#5b6472;font-size:14.5px;">B.Sc. (Hons) and M.Sc. Physics</div></a><a href="faculty.html" style="display:block;border:1px solid #ddd6c4;border-top:3px solid #b8862e;background:#fbf9f3;padding:18px 20px;text-decoration:none;color:#1c2430;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;margin-bottom:4px;">Faculty &amp; research</div><div style="color:#5b6472;font-size:14.5px;">Meet the faculty, find a guide</div></a><a href="news.html" style="display:block;border:1px solid #ddd6c4;border-top:3px solid #b8862e;background:#fbf9f3;padding:18px 20px;text-decoration:none;color:#1c2430;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;margin-bottom:4px;">News &amp; exam alerts</div><div style="color:#5b6472;font-size:14.5px;">GATE, JAM, CSIR-NET and more</div></a><a href="student-life.html" style="display:block;border:1px solid #ddd6c4;border-top:3px solid #b8862e;background:#fbf9f3;padding:18px 20px;text-decoration:none;color:#1c2430;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;margin-bottom:4px;">Student life</div><div style="color:#5b6472;font-size:14.5px;">Seminars, achievements, gallery</div></a></div>
+      <div style="display:grid;gap:16px;">
+        <div id="homeSeminar"></div>
+        <div id="homeHighlight"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + HEAD OF DEPARTMENT (short) -->
+  <section style="padding:56px 0;border-top:1px solid #ddd6c4;">
+    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start;">
         <div>
-          <div style="max-width:56ch;margin-bottom:24px;">
-            <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">About the department</div>
-            <h2 style="font-size:clamp(26px,3.4vw,36px);">Grounded in Koraput, built for research</h2>
-          </div>
-          <p>Established in 1963, the Department of Physics has grown from its beginnings as part of Vikram Deb College — founded in 1947 — into a premier department of Vikram Dev University, the primary centre of higher education for the undivided Koraput district.</p>
-          <p>Situated in Koraput, a tribal-dominated district, the department is committed to widening access to physics education and research for underrepresented groups, and to contributing to the region's development.</p>
+          <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">About the department</div>
+          <h2 style="font-size:clamp(26px,3.4vw,36px);">Grounded in Koraput</h2>
+          <p>Established in 1963, the Department of Physics is part of Vikram Dev University, the primary centre of higher education for the undivided Koraput district. We offer B.Sc. (Hons) and M.Sc. Physics.</p>
+          <p style="margin-bottom:0;"><a href="about.html" style="color:#2f5d58;font-weight:600;text-decoration:none;">More about the department and its laboratories &#8250;</a></p>
         </div>
-        <dl style="background:#fbf9f3;border:1px solid #ddd6c4;padding:26px 28px;margin:0;">
-          <dt style="font-size:13px;color:#5b6472;margin-top:0;">Department established</dt>
-          <dd style="margin:2px 0 0;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;">1963</dd>
-          <dt style="font-size:13px;color:#5b6472;margin-top:16px;">UG programme (B.Sc. Hons) launched</dt>
-          <dd style="margin:2px 0 0;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;">1963 — intake 64</dd>
-          <dt style="font-size:13px;color:#5b6472;margin-top:16px;">PG programme (M.Sc.) launched</dt>
-          <dd style="margin:2px 0 0;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;">2017 — intake 24</dd>
-          <dt style="font-size:13px;color:#5b6472;margin-top:16px;">Teaching faculty</dt>
-          <dd style="margin:2px 0 0;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;">9</dd>
-          <dt style="font-size:13px;color:#5b6472;margin-top:16px;">Support staff</dt>
-          <dd style="margin:2px 0 0;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;">3</dd>
-          <dt style="font-size:13px;color:#5b6472;margin-top:16px;">Laboratories</dt>
-          <dd style="margin:2px 0 0;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;">5</dd>
-        </dl>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:36px;">
-        <div style="border-left:2px solid #b8862e;padding-left:20px;">
-          <h3 style="font-size:15px;margin-bottom:8px;">Vision</h3>
-          <p style="color:#5b6472;font-size:15px;margin-bottom:0;">Empowering students from diverse backgrounds, especially from tribal and rural areas, to become leaders in physics education, research and innovation, fostering inclusive growth and societal transformation.</p>
-        </div>
-        <div style="border-left:2px solid #b8862e;padding-left:20px;">
-          <h3 style="font-size:15px;margin-bottom:8px;">Mission</h3>
-          <p style="color:#5b6472;font-size:15px;margin-bottom:0;">To provide quality physics education that cultivates critical thinking, creativity and problem-solving — by fostering an inclusive learning environment, promoting research and innovation, building collaborations with institutions and industry, addressing societal needs through physics applications, and strengthening faculty expertise and student employability.</p>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:24px;">
-        <div style="border-left:2px solid #b8862e;padding-left:20px;">
-          <h3 style="font-size:15px;margin-bottom:8px;">Curriculum</h3>
-          <p style="color:#5b6472;font-size:15px;margin-bottom:0;">Aligned with the National Education Policy (NEP) 2020, the curriculum emphasises interdisciplinary learning, research and skill development; implementation began in the 2024–25 academic session.</p>
-        </div>
-        <div style="border-left:2px solid #b8862e;padding-left:20px;">
-          <h3 style="font-size:15px;margin-bottom:8px;">Academic activities</h3>
-          <p style="color:#5b6472;font-size:15px;margin-bottom:0;">The department regularly arranges seminars, invited lectures by visiting experts, and student presentations and discussions — enhancing learning, fostering research, and encouraging intellectual exchange.</p>
-        </div>
-      </div>
-
-      <div style="max-width:56ch;margin-top:40px;margin-bottom:20px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">From the department</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">A note from the Head of the Department</h2>
-      </div>
-      <div class="hod-card" style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:32px;align-items:start;background:#fbf9f3;border:1px solid #ddd6c4;padding:32px;">
-        <div style="width:150px;height:150px;border-radius:50%;border:1.5px solid #b8862e;overflow:hidden;flex-shrink:0;">
-          <img src="assets/hod.jpg" alt="Gyana Ranjan Mohanty" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-        </div>
-        <div>
-          <blockquote style="margin:0 0 14px;font-family:Fraunces,Georgia,serif;font-size:19px;font-style:italic;color:#1c2430;">“Physics teaches us to look closely at the world and ask why. Our department is small, but we take that question seriously — in the classroom, in the lab, and in the questions our students bring to us. Whether you're just starting out or already curious about where physics can take you, you'll find a place here that takes your questions as seriously as you do.”</blockquote>
-          <div style="font-weight:600;">Gyana Ranjan Mohanty</div>
-          <div style="color:#5b6472;font-size:14.5px;">Head of the Department · Assistant Professor · MSc, NET</div>
-          <p style="font-size:13.5px;color:#5b6472;margin:10px 0 2px;"><a href="tel:+919040634349" style="color:#2f5d58;text-decoration:none;">+91-9040634349</a></p>
-          <p style="font-size:13.5px;color:#5b6472;margin:0;"><a href="mailto:1gyana5@gmail.com" style="color:#2f5d58;text-decoration:none;">1gyana5@gmail.com</a> · <a href="mailto:physics.vdu@gmail.com" style="color:#2f5d58;text-decoration:none;">physics.vdu@gmail.com</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROGRAMMES -->
-  <section id="programmes" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Study here</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Programmes &amp; syllabus</h2>
-        <p style="color:#5b6472;font-size:17px;">Current UGC-approved course offerings, with a link to each one's official syllabus.</p>
-      </div>
-      <div style="overflow-x:auto;">
-        <table class="prog-table" style="border-collapse:collapse;width:100%;min-width:560px;">
-          <thead>
-            <tr><th style="text-align:left;padding:14px 16px;color:#5b6472;font-weight:600;font-size:13.5px;border-bottom:1.5px solid #1c2430;">Programme</th><th style="text-align:left;padding:14px 16px;color:#5b6472;font-weight:600;font-size:13.5px;border-bottom:1.5px solid #1c2430;">Level</th><th style="text-align:left;padding:14px 16px;color:#5b6472;font-weight:600;font-size:13.5px;border-bottom:1.5px solid #1c2430;">Since</th><th style="text-align:left;padding:14px 16px;color:#5b6472;font-weight:600;font-size:13.5px;border-bottom:1.5px solid #1c2430;">Intake</th><th style="text-align:left;padding:14px 16px;color:#5b6472;font-weight:600;font-size:13.5px;border-bottom:1.5px solid #1c2430;">Curriculum</th><th style="text-align:left;padding:14px 16px;color:#5b6472;font-weight:600;font-size:13.5px;border-bottom:1.5px solid #1c2430;">Syllabus</th></tr>
-          </thead>
-          <tbody>
-            <tr><td data-label="Programme" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;font-weight:600;">B.Sc. Physics (Honours)</td><td data-label="Level" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;">UG</td><td data-label="Since" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;">1963</td><td data-label="Intake" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;">64</td><td data-label="Curriculum" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;color:#5b6472;">NEP 2020</td><td data-label="Syllabus" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;"><a href="https://vikramdevuniversity.ac.in/API/writable/uploads/20250428/1745819395_13961830b3d6dac1b958.pdf" target="_blank" rel="noopener" style="color:#2f5d58;text-decoration:none;font-weight:600;">View syllabus ›</a></td></tr>
-            <tr><td data-label="Programme" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;font-weight:600;">M.Sc. Physics</td><td data-label="Level" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;">PG</td><td data-label="Since" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;">2017</td><td data-label="Intake" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;">24</td><td data-label="Curriculum" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;color:#5b6472;">NEP 2020</td><td data-label="Syllabus" style="padding:14px 16px;border-bottom:1px solid #ddd6c4;"><a href="https://vikramdevuniversity.ac.in/#/masterPage/131" target="_blank" rel="noopener" style="color:#2f5d58;text-decoration:none;font-weight:600;">View syllabus ›</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="margin-top:14px;font-size:13px;color:#5b6472;">Official syllabi are maintained on the university website — the links above just point to them.</p>
-    </div>
-  </section>
-
-  <!-- RESOURCES -->
-  <section id="resources" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:60ch;margin-bottom:28px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">For students</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Study resources</h2>
-        <p style="color:#5b6472;font-size:17px;margin:0;">Previous year question papers, lecture notes, slides and more — free to download. The newest uploads are listed first and marked “New”.</p>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:20px;">
-        <input type="search" placeholder="Search by subject, semester or year…" aria-label="Search study resources" id="resQuery" style="width:100%;max-width:520px;box-sizing:border-box;padding:12px 14px;font:inherit;font-size:15.5px;border:1.5px solid #ddd6c4;background:#fbf9f3;color:#1c2430;border-radius:2px;">
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <div id="resTypeChips" style="display:contents"></div>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
-          <span style="color:#5b6472;font-size:13.5px;margin-right:4px;">Programme:</span>
-          <div id="resProgChips" style="display:contents"></div>
-        </div>
-      </div>
-
-      <p id="resCount" style="color:#5b6472;font-size:14px;margin:0 0 14px;"></p>
-
-      <div id="resRows" style="display:contents"></div>
-
-      <div id="resEmpty" hidden>
-        <div style="border:1px dashed #b9b19b;padding:28px;color:#5b6472;font-size:15.5px;">Nothing matches your search yet. Try another keyword or choose “All”.</div>
-      </div>
-
-      <p style="margin-top:20px;color:#5b6472;font-size:14px;">Can’t find a paper or notes you need? Write to <a href="mailto:vdu.physics@gmail.com" style="color:#2f5d58;font-weight:600;text-decoration:none;">vdu.physics@gmail.com</a> and we’ll try to add it.</p>
-    </div>
-  </section>
-
-  <!-- FACULTY -->
-  <section id="faculty" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">People</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Faculty &amp; staff</h2>
-      </div>
-
-      <div style="margin-bottom:52px;">
-        <h3 style="font-size:18px;margin-bottom:4px;">Faculty</h3>
-        <p style="color:#5b6472;font-size:14.5px;margin:0 0 24px;">The Head of the Department is the only sanctioned teaching post; all others are guest faculty.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;">
-          <div id="facultyGrid" style="display:contents"></div>
-        </div>
-      </div>
-
-      <div>
-        <h3 style="font-size:18px;margin-bottom:4px;">Support Staff</h3>
-        <p style="color:#5b6472;font-size:14.5px;margin:0 0 24px;">3 dedicated support staff members, including the laboratory demonstrator.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;">
-          <div id="supportGrid" style="display:contents"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESEARCH -->
-  <section id="research" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:12px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Guidance for students</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);margin-bottom:0;">Research Expertise</h2>
-      </div>
-      <p style="color:#5b6472;font-size:14px;margin:0 0 28px;max-width:none;">Interested in a topic? Students are welcome to contact the concerned faculty member for an internship, a project, a seminar topic, or simply to know more about their work. Contact details are under <a href="#faculty" style="color:#2f5d58;font-weight:600;text-decoration:none;">Faculty &amp; staff</a>.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Materials Science &amp; Thin Films</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0 0 10px;">Nanomaterials synthesis, thin-film deposition, sputtered metal nitrides, perovskite solar cells and photodetectors, and thin-film-based sensing.</p>
-          <p style="color:#5b6472;font-size:13.5px;margin:0;"><a href="faculty-details.html?id=aishwarya-madhuri" style="color:#2f5d58;text-decoration:none;font-weight:600;">Dr. Aishwarya Madhuri</a> · <a href="faculty-details.html?id=santilata-sahoo" style="color:#2f5d58;text-decoration:none;font-weight:600;">Dr. Santilata Sahoo</a> · <a href="faculty-details.html?id=lipsa-rani-karna" style="color:#2f5d58;text-decoration:none;font-weight:600;">Dr. Lipsa Rani Karna</a></p>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Computational &amp; Theoretical Physics</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0 0 10px;">Fluid dynamics, biophysics and quantum computing; density functional theory, electronic spin transport and 2D materials.</p>
-          <p style="color:#5b6472;font-size:13.5px;margin:0;"><a href="faculty-details.html?id=paramananda-padhi" style="color:#2f5d58;text-decoration:none;font-weight:600;">Dr. Paramananda Padhi</a> · <a href="faculty-details.html?id=alok-ranjan-sahoo" style="color:#2f5d58;text-decoration:none;font-weight:600;">Dr. Alok Ranjan Sahoo</a></p>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Photonics &amp; Sensors</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0 0 10px;">Biosensors, fiber-optic sensors and nanophotonics.</p>
-          <p style="color:#5b6472;font-size:13.5px;margin:0;"><a href="faculty-details.html?id=preeti-das" style="color:#2f5d58;text-decoration:none;font-weight:600;">Dr. Preeti Das</a></p>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Single-Molecule Biophysics</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0 0 10px;">Single-molecule biophysics.</p>
-          <p style="color:#5b6472;font-size:13.5px;margin:0;"><a href="faculty-details.html?id=bikash-chandra-swain" style="color:#2f5d58;text-decoration:none;font-weight:600;">Dr. Bikash Chandra Swain</a></p>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Semiconductor Physics &amp; Optoelectronics</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0 0 10px;">III-nitride semiconductors, pyroelectric effects and thermal transport, and optoelectronic applications.</p>
-          <p style="color:#5b6472;font-size:13.5px;margin:0;"><a href="faculty-details.html?id=gopal-hansdah" style="color:#2f5d58;text-decoration:none;font-weight:600;">Dr. Gopal Hansdah</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FACILITIES -->
-  <section id="facilities" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Infrastructure</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Laboratories &amp; facilities</h2>
-        <p style="color:#5b6472;font-size:17px;">Five state-of-the-art laboratories, a seminar library, and digital research resources.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;">
-          <img src="assets/computer-lab.jpg" alt="Computer Lab" style="width:100%;height:180px;object-fit:cover;display:block;">
-          <h3 style="font-size:17px;margin:16px 24px 8px;">Computer Lab</h3>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Modern Physics Lab</h3>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;">
-          <img src="assets/optics-lab.jpg" alt="Optics Lab" style="width:100%;height:180px;object-fit:cover;display:block;">
-          <h3 style="font-size:17px;margin:16px 24px 8px;">Optics Lab</h3>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;">
-          <img src="assets/condensed-matter-electronics-lab.jpg" alt="Condensed Matter &amp; Electronics Lab" style="width:100%;height:180px;object-fit:cover;display:block;">
-          <h3 style="font-size:17px;margin:16px 24px 8px;">Condensed Matter &amp; Electronics Lab</h3>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;">
-          <img src="assets/general-physics-lab.jpg" alt="General Physics Lab" style="width:100%;height:180px;object-fit:cover;display:block;">
-          <h3 style="font-size:17px;margin:16px 24px 8px;">General Physics Lab</h3>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;padding-bottom:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Seminar Library</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0;">More than 700 books, alongside digital resources and research facilities.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACTIVITIES -->
-  <section id="activities" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Beyond the classroom</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Student activities</h2>
-        <p style="color:#5b6472;font-size:17px;">A space for students to put their own curiosity and creativity on display, alongside the department's talks and lectures.</p>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;align-items:center;background:#fbf9f3;border:1px solid #ddd6c4;padding:28px;margin-bottom:32px;">
-        <img src="assets/spectrum-wall-magazine.jpg" alt="SPECTRUM wall magazine noticeboard, with student-made posters, illustrations and physics explainers" style="width:100%;height:100%;object-fit:cover;border:1px solid #ddd6c4;">
-        <div>
-          <h3 style="font-size:19px;margin-bottom:10px;">Wall Magazine — SPECTRUM</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0 0 10px;">SPECTRUM is entirely student-made — posters, illustrations, physics explainers, quizzes and puzzles that students research, design and put up themselves. It's as much a showcase of creativity as it is of physics, and it's refreshed with new editions through the year.</p>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Student Seminars</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0 0 10px;">Students present talks on physics topics of their choosing to the department.</p>
-          <a href="mailto:seminar.vduphysics@zohomail.in" style="color:#2f5d58;font-weight:600;text-decoration:none;font-size:15px;">seminar.vduphysics@zohomail.in</a>
-          <div id="seminarForm"></div>
-        </div>
-        <div style="background:#fbf9f3;border:1px solid #ddd6c4;padding:24px;">
-          <h3 style="font-size:17px;margin-bottom:8px;">Guest Seminars &amp; Invited Lectures</h3>
-          <p style="color:#5b6472;font-size:15px;margin:0;">Visiting experts give talks on current research and emerging areas in physics.</p>
-        </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin:32px 0 0;">
-        <figure style="margin:0;">
-          <img src="assets/seminar-presenter.jpg" alt="Student presenting at the departmental seminar" style="width:100%;height:220px;object-fit:cover;border:1px solid #ddd6c4;display:block;">
-          <figcaption style="font-size:13.5px;color:#5b6472;margin-top:8px;">Departmental Seminar — 18 Sep 2026.</figcaption>
-        </figure>
-        <figure style="margin:0;">
-          <img src="assets/seminar-audience.jpg" alt="Students and faculty attending the departmental seminar" style="width:100%;height:220px;object-fit:cover;border:1px solid #ddd6c4;display:block;">
-          <figcaption style="font-size:13.5px;color:#5b6472;margin-top:8px;">Departmental Seminar — 18 Sep 2026.</figcaption>
-        </figure>
-        <figure style="margin:0;">
-          <img src="assets/seminar-quasars.jpg" alt="Seminar presentation on quasars being projected to students" style="width:100%;height:220px;object-fit:cover;border:1px solid #ddd6c4;display:block;">
-          <figcaption style="font-size:13.5px;color:#5b6472;margin-top:8px;">Departmental Seminar — 18 Sep 2026.</figcaption>
-        </figure>
-      </div>
-
-      <h3 style="font-size:17px;margin:32px 0 16px;">Past seminars</h3>
-      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;">
-        <li class="sem-item" style="display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:start;padding:16px 0;border-bottom:1px solid #ddd6c4;">
-          <span style="color:#5b6472;font-size:13.5px;">18 Sep 2026</span>
+        <div style="display:flex;gap:18px;align-items:flex-start;">
+          <img src="assets/hod.jpg" alt="Gyana Ranjan Mohanty" style="width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:top;border:1.5px solid #d9ab5c;flex-shrink:0;">
           <div>
-            <span style="color:#2f5d58;font-weight:600;">Departmental Seminar (Letter No. 49/PHY/VDU/2026)</span>
-            <p style="margin:6px 0 0;font-size:14.5px;color:#5b6472;">Student presentations:</p>
-            <ul style="margin:6px 0 0;padding-left:18px;font-size:14.5px;color:#5b6472;">
-              <li><strong>Jyotirmayee Muduli</strong> (PHYS25-026) — Optical Fiber: Basics and Application</li>
-              <li><strong>Itishree Behera</strong> (PHYS26-018) — Nuclear Weapons for Peace</li>
-              <li><strong>Harapriya Kar</strong> (PHYS26-020) — Quasars: “The Mysterious Beast of Universe”</li>
-            </ul>
+            <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:6px;">From the Head of the Department</div>
+            <blockquote style="margin:0 0 10px;font-family:Fraunces,Georgia,serif;font-size:17px;line-height:1.5;">&ldquo;Physics teaches us to look closely at the world and ask why. Our department is small, but we take that question seriously &hellip;&rdquo;</blockquote>
+            <div style="font-weight:600;font-size:15px;">Gyana Ranjan Mohanty</div>
+            <div style="color:#5b6472;font-size:13.5px;margin-bottom:8px;">Head of the Department</div>
+            <a href="about.html" style="color:#2f5d58;font-weight:600;font-size:14.5px;text-decoration:none;">Read the full message &#8250;</a>
           </div>
-        </li>
-        <li class="sem-item" style="display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:start;padding:16px 0;border-bottom:1px solid #ddd6c4;">
-          <span style="color:#5b6472;font-size:13.5px;">11 Sep 2026</span>
-          <div>
-            <span style="color:#2f5d58;font-weight:600;">Departmental Seminar</span>
-            <p style="margin:6px 0 0;font-size:14.5px;color:#5b6472;">Student presentations:</p>
-            <ul style="margin:6px 0 0;padding-left:18px;font-size:14.5px;color:#5b6472;">
-              <li><strong>Sania Bhatra</strong> (PHYS25023) — MagLev Train Mechanism</li>
-              <li><strong>Pritiparnna Chouhan</strong> (BS(P)26-149) — Semiconductors in the Age of AI</li>
-              <li><strong>Sanjib Mandal</strong> (BS(P)24-008) — Tesla Coil</li>
-            </ul>
-          </div>
-        </li>
-        <li class="sem-item" style="display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:start;padding:16px 0;border-bottom:1px solid #ddd6c4;">
-          <span style="color:#5b6472;font-size:13.5px;">21 Aug 2026</span>
-          <div>
-            <span style="color:#2f5d58;font-weight:600;">Departmental Seminar</span>
-            <p style="margin:6px 0 0;font-size:14.5px;color:#5b6472;">Student presentations:</p>
-            <ul style="margin:6px 0 0;padding-left:18px;font-size:14.5px;color:#5b6472;">
-              <li><strong>Md Toufik Khan</strong> (PHYS25010) — Quantum Tunneling</li>
-              <li><strong>Ashutosh Panda</strong> (BS(P)26-002) — Behind Black Hole</li>
-              <li><strong>Rahul Ganda</strong> (BS(P)26-152) — Into the Infrared Universe (JWST)</li>
-            </ul>
-          </div>
-        </li>
-        <li class="sem-item" style="display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:start;padding:16px 0;border-bottom:1px solid #ddd6c4;">
-          <span style="color:#5b6472;font-size:13.5px;">14 Aug 2026</span>
-          <div>
-            <span style="color:#2f5d58;font-weight:600;">Departmental Seminar</span>
-            <p style="margin:6px 0 0;font-size:14.5px;color:#5b6472;">Student presentations:</p>
-            <ul style="margin:6px 0 0;padding-left:18px;font-size:14.5px;color:#5b6472;">
-              <li><strong>Amit Malakar</strong> (BS(P)25-019) — Working of a 4-Stroke Petrol Engine</li>
-              <li><strong>Prashnajit Thakur</strong> (BS(P)25-212) — Climate Change and Sustainability</li>
-              <li><strong>Nandini Debnath</strong> (BS(P)25-037) — Physics Behind Rainbow</li>
-              <li><strong>Snigdha Rani Jena</strong> (BS(P)25-145) — Physics Behind Mobile Phone</li>
-            </ul>
-          </div>
-        </li>
-        <li class="sem-item" style="display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:start;padding:16px 0;border-bottom:1px solid #ddd6c4;">
-          <span style="color:#5b6472;font-size:13.5px;">7 Aug 2026</span>
-          <div>
-            <span style="color:#2f5d58;font-weight:600;">Weekly Seminar Notice</span>
-            <p style="margin:6px 0 0;font-size:14.5px;color:#5b6472;"><strong>Dr. Preeti Das</strong> delivered a seminar on “How Light Can Detect Diseases? – The Physics of Optical Fibers.”</p>
-          </div>
-        </li>
-      </ul>
-
-      <p style="margin-top:24px;color:#5b6472;font-size:14.5px;"><em>Student secretaries for SPECTRUM, seminars and other activities will be elected and given formal roles going forward — details to follow.</em></p>
-    </div>
-  </section>
-
-  <!-- ALUMNI -->
-  <section id="alumni" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Beyond the department</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Alumni</h2>
-        <p style="color:#5b6472;font-size:17px;max-width:none;">Department alumni have gone on to contribute across academia, research, industry and governance.</p>
-      </div>
-      <p style="color:#5b6472;font-size:15px;">Alumni profiles will be added here as the network grows.</p>
-      <div style="max-width:56ch;margin-top:40px;margin-bottom:20px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Stay connected</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Alumni registration</h2>
-        <p style="color:#5b6472;font-size:17px;">Studied Physics here? Fill in the form below to join the department's alumni network.</p>
-      </div>
-      <div style="border:1px solid #ddd6c4;background:#fbf9f3;max-width:480px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-        <div>
-          <h3 style="font-size:16px;margin:0 0 4px;">Alumni Registration Form</h3>
-          <p style="color:#5b6472;font-size:14px;margin:0;">Opens in a new tab.</p>
-        </div>
-        <a href="https://forms.gle/WNCkkaWBp9u3RabVA" target="_blank" rel="noopener" style="background:#2f5d58;color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;padding:10px 18px;white-space:nowrap;">Fill the form ›</a>
-      </div>
-
-      <div style="max-width:720px;margin-top:28px;">
-        <h3 style="font-size:17px;margin-bottom:6px;">Fill the form here</h3>
-        <p style="color:#5b6472;font-size:14px;margin:0 0 12px;">You can complete the registration directly on this page. If the form does not load, <a href="https://forms.gle/WNCkkaWBp9u3RabVA" target="_blank" rel="noopener" style="color:#2f5d58;font-weight:600;text-decoration:none;">open it in a new tab ›</a></p>
-        <div style="border:1px solid #ddd6c4;background:#fbf9f3;">
-          <iframe class="alumni-frame" src="https://forms.gle/WNCkkaWBp9u3RabVA" title="Alumni Registration Form" loading="lazy" style="width:100%;height:760px;border:0;display:block;background:#fbf9f3;">Loading…</iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements" style="padding:56px 0;border-top:1px solid #ddd6c4;">
+  <!-- CONTACT STRIP -->
+  <section style="padding:56px 0;border-top:1px solid #ddd6c4;">
     <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Recognition</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Achievements &amp; awards</h2>
-        <p style="color:#5b6472;font-size:17px;">Student, faculty and department-level recognitions — add a card each time there's good news to share.</p>
-      </div>
-      <h3 style="font-size:18px;margin-bottom:4px;">Yuvotsav 2026 &mdash; Koraput (Viksit Bharat Young Leaders Dialogue 2027)</h3>
-      <p style="color:#5b6472;font-size:13.5px;margin:0 0 12px;">Organised by the Department of Sports &amp; Youth Services, Government of Odisha.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
-        <a href="assets/harapriya-yuvotsav-certificate.jpg" target="_blank" rel="noopener"><img src="assets/harapriya-yuvotsav-certificate.jpg" alt="Harapriya Kar's First Prize certificate, Poetry Writing, Yuvotsav 2026" loading="lazy" style="width:140px;height:100px;object-fit:cover;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-        <a href="assets/harapriya-prize-poem.jpg" target="_blank" rel="noopener"><img src="assets/harapriya-prize-poem.jpg" alt="Prize-winning poem by Harapriya Kar" loading="lazy" style="width:100px;height:140px;object-fit:cover;object-position:top;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-      </div>
-      <p style="color:#5b6472;font-size:13.5px;margin:-4px 0 14px;">Prize-winning poem by Harapriya Kar: &ldquo;ନିଶାମୁକ୍ତ ଯୁବକ, ବିକଶିତ ଭାରତ&rdquo; (Drug-free Youth, Developed India). Tap an image to read it in full.</p>
-
-      <h3 style="font-size:18px;margin-bottom:12px;">University Level Innovation &amp; Start-up Competition 2026</h3>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
-        <a href="assets/innovation-startup-student.jpg" target="_blank" rel="noopener"><img src="assets/innovation-startup-student.jpg" alt="Siddhartha Shankar Jena holding his Certificate of Participation" loading="lazy" style="width:140px;height:100px;object-fit:cover;object-position:top;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-        <a href="assets/innovation-startup-certificate.jpg" target="_blank" rel="noopener"><img src="assets/innovation-startup-certificate.jpg" alt="Certificate of Participation, University Level Innovation and Start-up Competition 2026" loading="lazy" style="width:140px;height:100px;object-fit:cover;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-      </div>
-
-      <h3 style="font-size:18px;margin-bottom:12px;">Gandhi Jayanti Celebration 2026</h3>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
-        <a href="assets/itishree-essay-award.jpg" target="_blank" rel="noopener"><img src="assets/itishree-essay-award.jpg" alt="Itishree Behera receiving her award on stage" loading="lazy" style="width:140px;height:100px;object-fit:cover;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-        <a href="assets/itishree-essay-certificate.jpg" target="_blank" rel="noopener"><img src="assets/itishree-essay-certificate.jpg" alt="Itishree Behera's First Prize Essay Competition certificate" loading="lazy" style="width:140px;height:100px;object-fit:cover;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-        <a href="assets/sidharth-debate-certificate.jpg" target="_blank" rel="noopener"><img src="assets/sidharth-debate-certificate.jpg" alt="Sidharth Ku. Jena's Third Prize Debate Competition certificate" loading="lazy" style="width:140px;height:100px;object-fit:cover;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-        <a href="assets/jyotirmayee-essay-certificate.jpg" target="_blank" rel="noopener"><img src="assets/jyotirmayee-essay-certificate.jpg" alt="Jyotirmayee Muduli's Third Prize Essay Competition certificate" loading="lazy" style="width:140px;height:100px;object-fit:cover;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-        <a href="assets/jyotirmayee-slogan-certificate.jpg" target="_blank" rel="noopener"><img src="assets/jyotirmayee-slogan-certificate.jpg" alt="Jyotirmayee Muduli's First Prize Slogan Writing certificate" loading="lazy" style="width:140px;height:100px;object-fit:cover;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-        <a href="assets/sania-essay-certificate.jpg" target="_blank" rel="noopener"><img src="assets/sania-essay-certificate.jpg" alt="Sania Bhatra's First Prize Essay Writing certificate" loading="lazy" style="width:140px;height:100px;object-fit:cover;display:block;border:1px solid #ddd6c4;border-radius:4px;"></a>
-      </div>
-
-      <div style="overflow-x:auto;margin-bottom:36px;">
-        <table class="ach-table" style="width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px;">
-          <thead><tr style="border-bottom:2px solid #b8862e;text-align:left;"><th style="padding:8px 10px 8px 0;">Name</th><th style="padding:8px 10px;">Category / Batch</th><th style="padding:8px 10px;">Result</th><th style="padding:8px 0;">Date</th></tr></thead>
-          <tbody>
-            <tr><td colspan="4" class="ach-group" style="padding:16px 0 6px;font-weight:700;color:#1c2430;">Yuvotsav 2026 &mdash; Koraput (Viksit Bharat Young Leaders Dialogue 2027)</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Harapriya Kar</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Poetry Writing</td><td data-label="Result" style="padding:8px 10px;">First Prize</td><td data-label="Date" style="padding:8px 0;">Nov 2026</td></tr>
-            <tr><td colspan="4" class="ach-group" style="padding:16px 0 6px;font-weight:700;color:#1c2430;">University Level Innovation &amp; Start-up Competition 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Siddhartha Shankar Jena</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Participation</td><td data-label="Result" style="padding:8px 10px;">Certificate of Participation</td><td data-label="Date" style="padding:8px 0;">2026</td></tr>
-            <tr><td colspan="4" class="ach-group" style="padding:16px 0 6px;font-weight:700;color:#1c2430;">Gandhi Jayanti Celebration 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Itishree Behera</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Essay Competition (Super Senior Category)</td><td data-label="Result" style="padding:8px 10px;">First Prize</td><td data-label="Date" style="padding:8px 0;">2 Oct 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Sidharth Sankar Jena</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Debate Competition (Super Senior Category)</td><td data-label="Result" style="padding:8px 10px;">Third Prize</td><td data-label="Date" style="padding:8px 0;">2 Oct 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Jyotirmayee Muduli</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Essay Competition (Super Senior Category)</td><td data-label="Result" style="padding:8px 10px;">Third Prize</td><td data-label="Date" style="padding:8px 0;">2 Oct 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Jyotirmayee Muduli</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Slogan Writing (PG 2nd Year)</td><td data-label="Result" style="padding:8px 10px;">First Prize</td><td data-label="Date" style="padding:8px 0;">2 Oct 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Sania Bhatra</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Essay Writing (PG 2nd Year)</td><td data-label="Result" style="padding:8px 10px;">First Prize</td><td data-label="Date" style="padding:8px 0;">2 Oct 2026</td></tr>
-            <tr><td colspan="4" class="ach-group" style="padding:16px 0 6px;font-weight:700;color:#1c2430;">Independence Day Celebration 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Sidharth Sankar Jena</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Odia Debate (UG 2nd Year)</td><td data-label="Result" style="padding:8px 10px;">Second Place</td><td data-label="Date" style="padding:8px 0;">15 Aug 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Sania Bhatra</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">English Debate (PG 2nd Year)</td><td data-label="Result" style="padding:8px 10px;">First Place</td><td data-label="Date" style="padding:8px 0;">15 Aug 2026</td></tr>
-            <tr><td colspan="4" class="ach-group" style="padding:16px 0 6px;font-weight:700;color:#1c2430;">Republic Day Celebration 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Sania Bhatra</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Debate (PG 1st Year)</td><td data-label="Result" style="padding:8px 10px;">First Place</td><td data-label="Date" style="padding:8px 0;">26 Jan 2026</td></tr>
-            <tr style="border-bottom:1px solid #ddd6c4;"><td data-label="Name" style="padding:8px 10px 8px 0;"><strong>Jyotirmayee Muduli</strong></td><td data-label="Category / Batch" style="padding:8px 10px;">Painting (PG 1st Year)</td><td data-label="Result" style="padding:8px 10px;">Third Place</td><td data-label="Date" style="padding:8px 0;">26 Jan 2026</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-
-        </div>
-      </section></main>
-    
-  
-
-  <!-- NOTICES -->
-  <section id="notices" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Stay informed</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">News &amp; notices</h2>
-        <p style="color:#5b6472;font-size:17px;">Competitive exam alerts up top; department announcements below.</p>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:36px;">
-        <div style="border:1px solid #ddd6c4;padding:18px;">
-          <span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;color:#b8862e;margin-bottom:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#b8862e;display:inline-block;"></span>GATE</span>
-          <h4 style="font-size:15.5px;margin:0 0 4px;">GATE 2027</h4>
-          <p style="color:#5b6472;font-size:14px;margin:0 0 6px;">Registration closed. Exam: 6, 7, 13, 14, 20 &amp; 21 Feb 2027.</p>
-          <a href="https://gate2027.iitm.ac.in/" target="_blank" rel="noopener" style="color:#2f5d58;font-size:13.5px;font-weight:600;text-decoration:none;">Official GATE site ›</a>
-        </div>
-        <div style="border:1px solid #ddd6c4;padding:18px;">
-          <span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;color:#b8862e;margin-bottom:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#b8862e;display:inline-block;"></span>JAM</span>
-          <h4 style="font-size:15.5px;margin:0 0 4px;">IIT JAM 2027</h4>
-          <p style="color:#5b6472;font-size:14px;margin:0 0 6px;">Registration closed. Exam: 14 Feb 2027.</p>
-          <a href="https://jam.iitkgp.ac.in/" target="_blank" rel="noopener" style="color:#2f5d58;font-size:13.5px;font-weight:600;text-decoration:none;">Official JAM site ›</a>
-        </div>
-        <div style="border:1px solid #ddd6c4;padding:18px;">
-          <span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;color:#b8862e;margin-bottom:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#b8862e;display:inline-block;"></span>JEST</span>
-          <h4 style="font-size:15.5px;margin:0 0 4px;">JEST 2027</h4>
-          <p style="color:#5b6472;font-size:14px;margin:0 0 6px;">Registration expected to open Feb 2027; exam tentatively in Apr 2027. Watch the official site for exact dates.</p>
-          <a href="https://www.jest.org.in/" target="_blank" rel="noopener" style="color:#2f5d58;font-size:13.5px;font-weight:600;text-decoration:none;">Official JEST site ›</a>
-        </div>
-        <div style="border:1px solid #ddd6c4;padding:18px;">
-          <span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;color:#b8862e;margin-bottom:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#b8862e;display:inline-block;"></span>CSIR-NET</span>
-          <h4 style="font-size:15.5px;margin:0 0 4px;">CSIR-NET December 2026</h4>
-          <p style="color:#5b6472;font-size:14px;margin:0 0 6px;">Applications closed on 9 Nov; correction window 10–12 Nov 2026 (till 11:50 PM). Exam: 19, 22 &amp; 27 Dec 2026.</p>
-          <a href="https://csirnet.nta.ac.in/" target="_blank" rel="noopener" style="color:#2f5d58;font-size:13.5px;font-weight:600;text-decoration:none;">Official CSIR-NET site ›</a>
-        </div>
-        <div style="border:1px solid #ddd6c4;padding:18px;">
-          <span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;color:#b8862e;margin-bottom:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#b8862e;display:inline-block;"></span>NGPE</span>
-          <h4 style="font-size:15.5px;margin:0 0 4px;">NGPE 2027</h4>
-          <p style="color:#5b6472;font-size:14px;margin:0 0 6px;">National Graduate Physics Examination by IAPT. Poster, brochure and enrolment forms for 2027 are on the IAPT site — check it for dates.</p>
-          <a href="https://www.indapt.org/national-graduate-physics-examination-ngpe" target="_blank" rel="noopener" style="color:#2f5d58;font-size:13.5px;font-weight:600;text-decoration:none;">Official NGPE page ›</a>
-        </div>
-      </div>
-
-      <h3 style="font-size:18px;margin-bottom:6px;">Opportunities &amp; winter schools</h3>
-      <p style="color:#5b6472;font-size:14.5px;margin:0 0 18px;">Summarised in our own words with a link to the official page — not the original poster, for copyright reasons.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:36px;">
-        <div style="border:1px solid #ddd6c4;padding:18px;">
-          <span style="display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;color:#b8862e;margin-bottom:8px;"><span style="width:6px;height:6px;border-radius:50%;background:#b8862e;display:inline-block;"></span>IISc</span>
-          <h4 style="font-size:15.5px;margin:0 0 4px;">Second Annual Online Winter School — Matter, Life &amp; Cosmos</h4>
-          <p style="color:#5b6472;font-size:14px;margin:0;">For senior UG/master's students. 14–18 Dec 2026. Regular registration open till 1 Dec 2026 (early-bird offer ended 10 Nov).<br>
-          <a href="https://physics.iisc.ac.in/events-all/schools/winter-school/" target="_blank" rel="noopener" style="color:#2f5d58;text-decoration:none;">Winter school page ›</a></p>
-        </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px 40px;align-items:start;">
+        <div><div style="font-weight:700;font-size:13.5px;color:#5b6472;margin-bottom:4px;">Address</div><div style="font-size:15px;">Department of Physics, Vikram Dev University, At/Po: Jayapur, N.H. 26, PIN: 764001, Dist: Koraput, Odisha</div></div>
+        <div><div style="font-weight:700;font-size:13.5px;color:#5b6472;margin-bottom:4px;">Email</div><div style="font-size:15px;"><a href="mailto:vdu.physics@gmail.com">vdu.physics@gmail.com</a></div></div>
+        <div><div style="font-weight:700;font-size:13.5px;color:#5b6472;margin-bottom:4px;">Office hours</div><div style="font-size:15px;">Monday&ndash;Saturday, 8:15 AM&ndash;5:10 PM</div><a href="alumni-contact.html#contact" style="color:#2f5d58;font-weight:600;font-size:14.5px;text-decoration:none;">Contact page &#8250;</a></div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Around the department</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Gallery</h2>
-        <p style="color:#5b6472;font-size:17px;">A slide for each photo, with its own caption.</p>
-      </div>
-      <div style="position:relative;">
-        <div style="overflow:hidden;border:1px solid #ddd6c4;background:#fbf9f3;">
-          <div id="slideStrip" style="display:flex;transition:transform 0.35s ease;">
-            <div id="slideItems" style="display:contents"></div>
-          </div>
-        </div>
-        <button id="prevSlide" aria-label="Previous slide" style="position:absolute;left:-18px;top:40%;background:#141d33;color:#fff;border:none;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;">‹</button>
-        <button id="nextSlide" aria-label="Next slide" style="position:absolute;right:-18px;top:40%;background:#141d33;color:#fff;border:none;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;">›</button>
-        <div style="display:flex;justify-content:center;gap:8px;margin-top:16px;">
-          <div id="slideDots" style="display:contents"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" style="padding:56px 0;border-top:1px solid #ddd6c4;">
-    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:56ch;margin-bottom:32px;">
-        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Reach us</div>
-        <h2 style="font-size:clamp(26px,3.4vw,36px);">Contact the department</h2>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;">
-        <dl style="margin:0;">
-          <dt style="font-size:13px;color:#5b6472;margin-top:0;">Address</dt>
-          <dd style="margin:2px 0 20px;font-size:16px;">Department of Physics, <a href="https://vikramdevuniversity.ac.in/" target="_blank" rel="noopener" style="color:#2f5d58;text-decoration:none;">Vikram Dev University</a>, At/Po: Jayapur, N.H. 26, Jayapur, PIN: 764001, Dist: Koraput, Odisha, India</dd>
-          <dt style="font-size:13px;color:#5b6472;">Email</dt>
-          <dd style="margin:2px 0 20px;font-size:16px;"><a href="mailto:vdu.physics@gmail.com" style="color:#2f5d58;text-decoration:none;">vdu.physics@gmail.com</a></dd>
-          <dt style="font-size:13px;color:#5b6472;">Office hours</dt>
-          <dd style="margin:2px 0 0;font-size:16px;">Monday–Saturday, 8:15 AM–5:10 PM</dd>
-        </dl>
-        <a href="https://maps.app.goo.gl/32XcGagBefQC3tJA8" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;border:1px solid #ddd6c4;background:#fbf9f3;padding:28px;text-decoration:none;color:#1c2430;">
-          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#2f5d58" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
-          <span style="font-weight:600;font-size:16px;">Open in Google Maps</span>
-          <small style="color:#5b6472;">Vikram Dev University, Koraput, Odisha</small>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-
-</div>
-
-<!-- FOOTER -->
-<footer style="background:#141d33;color:#c7cede;">
-  <div style="max-width:1140px;margin:0 auto;padding:52px 24px 24px;">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-bottom:32px;">
-      <div>
-        <h4 style="color:#fff;font-size:16px;margin-bottom:10px;">Department of Physics</h4>
-        <p style="font-size:14.5px;margin:0 0 14px;">Vikram Dev University, Jayapur, Koraput, Odisha, India. Part of the university that carries forward Jeypore College, founded 1947.</p>
-        <div style="display:flex;gap:14px;">
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener" style="color:#c7cede;"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5h1.65V3.7C15.9 3.6 15 3.5 13.9 3.5c-2.5 0-4.2 1.5-4.2 4.3v2.1H7v3.1h2.7V21h3.8z"></path></svg></a>
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener" style="color:#c7cede;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"></circle></svg></a>
-          <a href="#" aria-label="Twitter / X" target="_blank" rel="noopener" style="color:#c7cede;"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4 4l7.2 9.6L4.4 20H6l6-6.5 4.4 6.5H20l-7.5-9.9L19.8 4h-1.6l-5.5 6-4-6H4z"></path></svg></a>
-        </div>
-      </div>
-      <div>
-        <h4 style="color:#fff;font-size:16px;margin-bottom:10px;">Quick links</h4>
-        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14.5px;">
-          <li><a href="https://vikramdevuniversity.ac.in/#/home" target="_blank" rel="noopener" style="color:#c7cede;text-decoration:none;">University home</a></li>
-          <li><a href="#programmes" style="color:#c7cede;text-decoration:none;">Programmes</a></li>
-          <li><a href="#resources" style="color:#c7cede;text-decoration:none;">Student resources</a></li>
-          <li><a href="#faculty" style="color:#c7cede;text-decoration:none;">Faculty &amp; Staff</a></li>
-          <li><a href="#notices" style="color:#c7cede;text-decoration:none;">News &amp; Notices</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color:#fff;font-size:16px;margin-bottom:10px;">Department</h4>
-        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14.5px;">
-          <li><a href="#about" style="color:#c7cede;text-decoration:none;">About</a></li>
-          <li><a href="#research" style="color:#c7cede;text-decoration:none;">Research</a></li>
-          <li><a href="#facilities" style="color:#c7cede;text-decoration:none;">Facilities</a></li>
-          <li><a href="#activities" style="color:#c7cede;text-decoration:none;">Activities</a></li>
-          <li><a href="#alumni" style="color:#c7cede;text-decoration:none;">Alumni</a></li>
-          <li><a href="#achievements" style="color:#c7cede;text-decoration:none;">Achievements</a></li>
-          <li><a href="#contact" style="color:#c7cede;text-decoration:none;">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-top:20px;border-top:1px solid #33405e;font-size:13px;">
-      <span>© <span id="year"></span> Department of Physics, Vikram Dev University.</span>
-      <span>तमसो मा ज्योतिर्गमय — From darkness, lead me to light.</span>
-    </div>
-  </div>
-</footer>
-
+</main>
+<div id="site-footer"></div>
 <script src="facultyData.js"></script>
-<script src="data.js"></script>
+<script src="resources.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
