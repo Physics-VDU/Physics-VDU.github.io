@@ -64,6 +64,11 @@ window.ACHIEVEMENTS = [
   {"title": "Republic Day Celebration 2026", "images": [], "rows": [["Sania Bhatra", "Debate (PG 1st Year)", "First Place", "26 Jan 2026"], ["Jyotirmayee Muduli", "Painting (PG 1st Year)", "Third Place", "26 Jan 2026"]]}
 ];
 
+// ALUMNI VISITS (Alumni page). Newest first. images: photos of the visit (3 photos give the best layout).
+window.ALUMNI_VISITS = [
+  {"name": "Shakambari Sadangi", "batch": "B.Sc. 2009–2012 Batch", "text": "Visited us and addressed our students on 20 Nov 2026.", "images": [{"src": "assets/alumni-visit-1.jpg", "alt": "Alumna Shakambari Sadangi addressing students in the classroom"}, {"src": "assets/alumni-visit-2.jpg", "alt": "Shakambari Sadangi speaking to students and faculty"}, {"src": "assets/alumni-visit-3.jpg", "alt": "Shakambari Sadangi explaining a topic on the blackboard"}]}
+];
+
 // GALLERY SLIDES - img = file in assets/, caption shown under the photo.
 window.SLIDES = [
   {"img": "assets/faculty-group-1.jpg", "caption": "Department Faculty"},

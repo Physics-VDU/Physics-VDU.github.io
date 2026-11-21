@@ -51,6 +51,8 @@
     });
   }
 
+  if ($('heroFacultyCount') && FD) $('heroFacultyCount').textContent = FD.ORDER.faculty.length;   /* Home banner: number of teaching faculty */
+
   /* ---------- study resources (Resources page) ---------- */
   var V = window.VDU;
   if ($('resRows') && V) {
@@ -145,6 +147,31 @@
             }).join('') + '</tr>';
           }).join('');
       }).join('') + '</tbody></table>';
+  }
+
+  /* ---------- alumni visits (Alumni page) ---------- */
+  var AV = window.ALUMNI_VISITS || [];
+  if ($('alumniVisits') && AV.length) {
+    if (!$('visitCss')) {
+      var vs = document.createElement('style'); vs.id = 'visitCss';
+      vs.textContent = '.visit-grid{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:10px;aspect-ratio:2/1;}' +
+        '.visit-grid a:first-child{grid-row:1/3;}.visit-grid a{display:block;overflow:hidden;min-height:0;}' +
+        '.visit-grid img{display:block;width:100%;height:100%;object-fit:cover;}' +
+        '.visit-many{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;}.visit-many img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;}' +
+        '@media (max-width:760px){.visit-grid{grid-template-columns:1fr;grid-template-rows:none;aspect-ratio:auto;}.visit-grid a:first-child{grid-row:auto;}.visit-grid img{height:auto;aspect-ratio:4/3;}}';
+      document.head.appendChild(vs);
+    }
+    $('alumniVisits').innerHTML = AV.map(function (v) {
+      var ims = (v.images || []).map(function (im) {
+        return '<a href="' + esc(im.src) + '" target="_blank" rel="noopener"><img src="' + esc(im.src) + '" alt="' + esc(im.alt) + '" loading="lazy"></a>';
+      }).join('');
+      return '<div style="border:1px solid #ddd6c4;border-top:3px solid #b8862e;background:#fbf9f3;padding:22px;margin-bottom:24px;">' +
+        '<div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:6px;">Our Alumni</div>' +
+        '<h3 style="font-size:20px;margin-bottom:4px;">' + esc(v.name) + (v.batch ? ' <span style="font-family:\'Source Sans 3\',sans-serif;font-weight:500;font-size:16px;color:#5b6472;">(' + esc(v.batch) + ')</span>' : '') + '</h3>' +
+        '<p style="color:#5b6472;font-size:15px;margin:0 0 16px;">' + esc(v.text || '') + '</p>' +
+        '<div class="' + ((v.images || []).length === 3 ? 'visit-grid' : 'visit-many') + '">' + ims + '</div>' +
+        '<p style="color:#7a8290;font-size:12.5px;margin:8px 0 0;">Tap a photo to see it full size.</p></div>';
+    }).join('');
   }
 
   /* ---------- home page: latest achievement + seminar strip ---------- */
