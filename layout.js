@@ -9,6 +9,7 @@
     ['resources.html', 'Resources'],
     ['faculty.html', 'Faculty & Research'],
     ['student-life.html', 'Student Life'],
+    ['gallery.html', 'Gallery'],
     ['news.html', 'News'],
     ['alumni-contact.html', 'Alumni & Contact']
   ];
@@ -61,6 +62,7 @@
     '<li><a href="about.html" style="color:#c7cede;text-decoration:none;">About &amp; Facilities</a></li>' +
     '<li><a href="student-life.html" style="color:#c7cede;text-decoration:none;">Student Life</a></li>' +
     '<li><a href="student-life.html#achievements" style="color:#c7cede;text-decoration:none;">Achievements</a></li>' +
+    '<li><a href="gallery.html" style="color:#c7cede;text-decoration:none;">Gallery</a></li>' +
     '<li><a href="alumni-contact.html#alumni" style="color:#c7cede;text-decoration:none;">Alumni</a></li>' +
     '<li><a href="alumni-contact.html#contact" style="color:#c7cede;text-decoration:none;">Contact</a></li></ul></div></div>' +
     '<div style="border-top:1px solid #33405e;padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;font-size:13.5px;color:#98a3bd;">' +

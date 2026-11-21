@@ -26,15 +26,27 @@
     (p.spec ? '<p style="color:#5b6472;font-size:14.5px;margin:0 0 4px;">' + esc(p.spec) + '</p>' : '') +
     phone + '<div style="display:flex;flex-direction:column;gap:6px;">' + emails + links + '</div></div></div>';
 
-  var secs = (p.sections || {});
+  var secs = Object.assign({}, p.sections || {});
   var open = {};
+
+  /* Teaching Materials: study resources in data.js that carry this person's id ("faculty": id) */
+  var V = window.VDU;
+  if (V) {
+    var mine = V.allResources().filter(function (r) { return r.faculty === id; });
+    var m = V.groupsHtml(mine);
+    if (m.live) secs.materials = m.html;
+  }
+  var ORDER = FD.SECTION_ORDER.slice();
+  var ti = -1; ORDER.forEach(function (s, i) { if (s[0] === 'teaching') ti = i; });
+  ORDER.splice(ti < 0 ? ORDER.length : ti + 1, 0, ['materials', (p.sections && p.sections.teaching) ? 'Teaching Materials' : 'Teaching']);
+  if (location.hash === '#materials') open.materials = true;
   function sections() {
-    return FD.SECTION_ORDER.filter(function (s) { return secs[s[0]]; }).map(function (s) {
+    return ORDER.filter(function (s) { return secs[s[0]]; }).map(function (s) {
       var k = s[0], on = !!open[k];
       return '<div style="border-bottom:1px solid #ddd6c4;">' +
         '<button data-k="' + k + '" aria-expanded="' + on + '" style="width:100%;background:none;border:none;text-align:left;cursor:pointer;padding:16px 4px;display:flex;justify-content:space-between;align-items:center;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;color:#1c2430;">' +
         '<span>' + esc(s[1]) + '</span><span style="color:#b8862e;font-size:14px;transform:rotate(' + (on ? 180 : 0) + 'deg);transition:transform .2s ease;">\u25bc</span></button>' +
-        '<div class="acc-body" style="max-height:' + (on ? '3000px' : '0') + ';padding:0 4px;font-size:15px;"><div style="padding-bottom:18px;">' + secs[k] + '</div></div></div>';
+        '<div class="acc-body" style="max-height:' + (on ? '9000px' : '0') + ';padding:0 4px;font-size:15px;"><div style="padding-bottom:18px;">' + secs[k] + '</div></div></div>';
     }).join('');
   }
   var box = document.getElementById('person');
@@ -44,4 +56,8 @@
     open[b.getAttribute('data-k')] = !open[b.getAttribute('data-k')]; draw();
   });
   draw();
+  if (location.hash === '#materials' && secs.materials) {
+    var mb = box.querySelector('button[data-k="materials"]');
+    if (mb) setTimeout(function () { mb.scrollIntoView({ block: 'start' }); }, 50);
+  }
 })();
