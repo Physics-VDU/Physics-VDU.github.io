@@ -137,10 +137,8 @@
     }).join('');
   }
   var CF = window.CLUBS_FORM || '';
-  if ($('clubsRegister')) {
-    $('clubsRegister').innerHTML = CF
-      ? '<a href="' + esc(CF) + '" target="_blank" rel="noopener" style="display:inline-block;background:#2f5d58;color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:12px 22px;">Register for a club \u203a</a>'
-      : '<span style="color:#7a8290;font-size:14.5px;">Registration opens soon.</span>';
+  if ($('clubsRegister') && CF) {
+    $('clubsRegister').innerHTML = '<a href="' + esc(CF) + '" target="_blank" rel="noopener" style="display:inline-block;background:#2f5d58;color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:12px 22px;">Register for a club \u203a</a>';
   }
 
   /* ---------- achievements ---------- */
