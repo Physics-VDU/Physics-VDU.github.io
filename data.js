@@ -41,7 +41,8 @@ window.RESOURCES = [
 //   label: the underlined link text   text: the rest of the sentence   url: where it goes   external: true = opens in a new tab
 window.ALERTS = [
   {"label": "Student resources", "text": " — question papers, notes & slides", "url": "resources.html"},
-  {"label": "Friday Seminar", "text": " — want to give a talk? Register with the short form", "url": "https://docs.google.com/forms/d/1781gSBEr_DGqn0pGsjHB4YU9dqxHqxUWZY0ythMUBwM/viewform", "external": true}
+  {"label": "Friday Seminar", "text": " — want to give a talk? Register with the short form", "url": "https://docs.google.com/forms/d/1781gSBEr_DGqn0pGsjHB4YU9dqxHqxUWZY0ythMUBwM/viewform", "external": true},
+  {"label":"Student Clubs","text":" — register to join a department club","url":"student-life.html#clubs"}
 ];
 
 // NEWS & NOTICES page. group: "exam" (competitive exams) or "opportunity" (winter schools etc.). Delete a line when it is no longer relevant.
@@ -53,6 +54,27 @@ window.NOTICES = [
   {"group": "exam", "tag": "NGPE", "title": "NGPE 2027", "text": "National Graduate Physics Examination by IAPT. Poster, brochure and enrolment forms for 2027 are on the IAPT site — check it for dates.", "url": "https://www.indapt.org/national-graduate-physics-examination-ngpe", "linkText": "Official NGPE page"},
   {"group": "opportunity", "tag": "IISc", "title": "Second Annual Online Winter School — Matter, Life & Cosmos", "text": "For senior UG/master's students. 14–18 Dec 2026. Regular registration open till 1 Dec 2026 (early-bird offer ended 10 Nov).", "url": "https://physics.iisc.ac.in/events-all/schools/winter-school/", "linkText": "Winter school page"}
 ];
+
+// STUDENT CLUBS (Student Life page). One line per club: group = the heading it appears under, name, text = one short line. Add or delete lines freely.
+window.CLUBS = [
+  {"group": "Science & Learning", "name": "Science Communication", "text": "Explain science in simple words — through talks, posters, short videos and social media — to classmates, schools and the community."},
+  {"group": "Science & Learning", "name": "Astrophysics", "text": "Look up and wonder: sky-watching, discussions on stars, galaxies and the universe, and short talks by members."},
+  {"group": "Science & Learning", "name": "AI Club", "text": "Explore how artificial intelligence can help in learning and problem solving — and talk honestly about its limits."},
+  {"group": "Science & Learning", "name": "JAM / GATE / Competitive Exams Group", "text": "Prepare together: peer study groups, problem-solving sessions and shared resources for JAM, GATE, CSIR-NET and other exams."},
+  {"group": "Science & Learning", "name": "Practical Knowledge Group", "text": "Learn by doing: hands-on skills and practical know-how that go beyond the syllabus."},
+  {"group": "Creative & Media", "name": "Poetry, Painting & Storytelling", "text": "Give your imagination a voice — write, draw and narrate, and share your work in our SPECTRUM wall magazine."},
+  {"group": "Creative & Media", "name": "Book, Film & Debate", "text": "Read, watch and argue well: book circles, film discussions and debates on ideas that matter."},
+  {"group": "Creative & Media", "name": "Photography & Videography", "text": "Capture the department's moments — events, experiments and campus life — and build your visual storytelling skills."},
+  {"group": "Creative & Media", "name": "Music", "text": "Sing, play and perform — a space for musicians of every level."},
+  {"group": "Creative & Media", "name": "Dance", "text": "Move, rehearse and perform together at department and campus events."},
+  {"group": "Community & Environment", "name": "Garden & Eco Club", "text": "Care for our new department garden and take small, practical steps for a greener campus."},
+  {"group": "Community & Environment", "name": "Zero-Waste & Upcycling", "text": "Reduce, reuse and reinvent — turn waste into something useful and beautiful."},
+  {"group": "Community & Environment", "name": "School Outreach", "text": "Visit schools to share simple experiments and inspire young students to love science."},
+  {"group": "Sports & Wellbeing", "name": "Sports", "text": "Stay active and enjoy team spirit through games and friendly matches."}
+];
+
+// CLUBS REGISTRATION FORM - the Google Form students use to register for clubs (paste the "viewform" link). While empty, the page says registration opens soon.
+window.CLUBS_FORM = "https://docs.google.com/forms/d/1G6T766HQKOGxuplNtCPODt6VpyFdaQIMXFwpbETAdZg/viewform";
 
 // ACHIEVEMENTS (Student Life page). Newest group first. images: certificate photos (portrait: true for tall ones). rows: [name, category / batch, result, date]
 window.ACHIEVEMENTS = [

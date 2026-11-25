@@ -123,6 +123,26 @@
   if ($('noticeExams')) $('noticeExams').innerHTML = noticeCards('exam');
   if ($('noticeOpps')) $('noticeOpps').innerHTML = noticeCards('opportunity');
 
+  /* ---------- student clubs ---------- */
+  var CL = window.CLUBS || [];
+  if ($('clubsGrid')) {
+    var cg = [], cby = {};
+    CL.forEach(function (c) { if (!cby[c.group]) { cby[c.group] = []; cg.push(c.group); } cby[c.group].push(c); });
+    $('clubsGrid').innerHTML = cg.map(function (g) {
+      return '<div style="margin-bottom:26px;"><h3 style="font-size:18px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #b8862e;">' + esc(g) + '</h3>' +
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;">' + cby[g].map(function (c) {
+          return '<div style="border:1px solid #ddd6c4;background:#fbf9f3;padding:14px 16px;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:16.5px;line-height:1.3;margin-bottom:4px;">' + esc(c.name) + '</div>' +
+            '<div style="color:#5b6472;font-size:14.5px;">' + esc(c.text) + '</div></div>';
+        }).join('') + '</div></div>';
+    }).join('');
+  }
+  var CF = window.CLUBS_FORM || '';
+  if ($('clubsRegister')) {
+    $('clubsRegister').innerHTML = CF
+      ? '<a href="' + esc(CF) + '" target="_blank" rel="noopener" style="display:inline-block;background:#2f5d58;color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:12px 22px;">Register for a club \u203a</a>'
+      : '<span style="color:#7a8290;font-size:14.5px;">Registration opens soon.</span>';
+  }
+
   /* ---------- achievements ---------- */
   var AC = window.ACHIEVEMENTS || [];
   if ($('achGroups')) {

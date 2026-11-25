@@ -15,7 +15,7 @@
 <script src="data.js?v=20261122"></script>
 <script src="layout.js?v=20261122"></script>
 <main id="top">
-<div style="max-width:1140px;margin:0 auto;padding:22px 24px 0;display:flex;flex-wrap:wrap;gap:10px;"><a href="#activities" style="display:inline-block;padding:7px 16px;border:1.5px solid #c9c1ab;border-radius:999px;color:#1c2430;text-decoration:none;font-weight:600;font-size:14px;">Activities</a><a href="#achievements" style="display:inline-block;padding:7px 16px;border:1.5px solid #c9c1ab;border-radius:999px;color:#1c2430;text-decoration:none;font-weight:600;font-size:14px;">Achievements</a><a href="gallery.html" style="display:inline-block;padding:7px 16px;border:1.5px solid #c9c1ab;border-radius:999px;color:#1c2430;text-decoration:none;font-weight:600;font-size:14px;">Gallery</a></div>
+<div style="max-width:1140px;margin:0 auto;padding:22px 24px 0;display:flex;flex-wrap:wrap;gap:10px;"><a href="#activities" style="display:inline-block;padding:7px 16px;border:1.5px solid #c9c1ab;border-radius:999px;color:#1c2430;text-decoration:none;font-weight:600;font-size:14px;">Activities</a><a href="#clubs" style="display:inline-block;padding:7px 16px;border:1.5px solid #c9c1ab;border-radius:999px;color:#1c2430;text-decoration:none;font-weight:600;font-size:14px;">Clubs</a><a href="#achievements" style="display:inline-block;padding:7px 16px;border:1.5px solid #c9c1ab;border-radius:999px;color:#1c2430;text-decoration:none;font-weight:600;font-size:14px;">Achievements</a><a href="gallery.html" style="display:inline-block;padding:7px 16px;border:1.5px solid #c9c1ab;border-radius:999px;color:#1c2430;text-decoration:none;font-weight:600;font-size:14px;">Gallery</a></div>
 <section id="activities" style="padding:56px 0;border-top:1px solid #ddd6c4;">
     <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
       <div style="max-width:56ch;margin-bottom:32px;">
@@ -123,7 +123,31 @@
       <p style="margin-top:24px;color:#5b6472;font-size:14.5px;"><em>Student secretaries for SPECTRUM, seminars and other activities will be elected and given formal roles going forward — details to follow.</em></p>
     </div>
   </section>
-<section id="achievements" style="padding:56px 0;border-top:1px solid #ddd6c4;">
+<section id="clubs" style="padding:56px 0;border-top:1px solid #ddd6c4;">
+    <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
+      <div style="max-width:68ch;margin-bottom:28px;">
+        <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Beyond the classroom</div>
+        <h2 style="font-size:clamp(26px,3.4vw,36px);">Student Clubs</h2>
+        <p style="font-size:17px;">A degree is more than lectures and examinations. Some of the best parts of student life are what you build alongside your studies &mdash; a skill, a friendship, a project, a voice. Our department clubs are groups of students who come together around something they enjoy, learn from one another, and grow the talents that no syllabus can teach: creativity, teamwork, leadership and confidence.</p>
+        <p style="font-size:17px;margin-bottom:0;">Whether you love explaining science, caring for a garden, writing poems, framing a photograph, arguing a point or gazing at the stars &mdash; there is a place for you. The clubs are just being formed, so your interest and ideas will shape them. Have an interest that is not listed? Write to us at <a href="mailto:vdu.physics@gmail.com">vdu.physics@gmail.com</a> and we will see how to start it.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:32px;">
+        <div style="border-top:3px solid #b8862e;background:#fbf9f3;border:1px solid #ddd6c4;border-top:3px solid #b8862e;padding:16px 18px;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17px;margin-bottom:4px;">1. Register</div><div style="color:#5b6472;font-size:14.5px;">Fill the short Google Form and choose the clubs you would like to join.</div></div>
+        <div style="background:#fbf9f3;border:1px solid #ddd6c4;border-top:3px solid #b8862e;padding:16px 18px;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17px;margin-bottom:4px;">2. Meet &amp; make</div><div style="color:#5b6472;font-size:14.5px;">Form your group, meet fellow members, plan activities and start creating.</div></div>
+        <div style="background:#fbf9f3;border:1px solid #ddd6c4;border-top:3px solid #b8862e;padding:16px 18px;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:17px;margin-bottom:4px;">3. Showcase</div><div style="color:#5b6472;font-size:14.5px;">Once a year, each club presents its work in a department seminar.</div></div>
+      </div>
+
+      <div id="clubsGrid"></div>
+
+      <div style="margin-top:32px;border:1px solid #ddd6c4;border-left:3px solid #b8862e;background:#fbf9f3;padding:20px 24px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between;">
+        <div style="max-width:60ch;"><div style="font-family:Fraunces,Georgia,serif;font-weight:600;font-size:19px;margin-bottom:4px;">Ready to join?</div>
+        <div style="color:#5b6472;font-size:14.5px;">Pick one club or several. Every club is open to students of all years &mdash; the only thing you need is curiosity and a little time.</div></div>
+        <div id="clubsRegister"></div>
+      </div>
+    </div>
+  </section>
+  <section id="achievements" style="padding:56px 0;border-top:1px solid #ddd6c4;">
     <div style="max-width:1140px;margin:0 auto;padding:0 24px;">
       <div style="max-width:56ch;margin-bottom:32px;">
         <div style="color:#b8862e;font-weight:600;font-size:14px;margin-bottom:8px;">Recognition</div>
