@@ -18,7 +18,7 @@
 
   var nav = NAV.map(function (n) {
     var on = n[0] === page;
-    return '<a href="' + n[0] + '"' + (on ? ' aria-current="page"' : '') + ' style="color:' + (on ? '#fff' : '#c7cede') + ';text-decoration:none;font-size:14.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid ' + (on ? '#d9ab5c' : 'transparent') + ';">' + esc(n[1]) + '</a>';
+    return '<a href="' + n[0] + '"' + (on ? ' aria-current="page"' : '') + ' style="color:' + (on ? '#fff' : '#c7cede') + ';text-decoration:none;font-size:16.5px;font-weight:600;padding:6px 2px;border-bottom:2px solid ' + (on ? '#d9ab5c' : 'transparent') + ';">' + esc(n[1]) + '</a>';
   }).join('');
 
   var header =
@@ -45,13 +45,27 @@
       '<div style="overflow:hidden;flex:1;min-width:0;white-space:nowrap;"><div style="display:inline-block;animation:marquee 60s linear infinite;">' + half + half + '</div></div></div></div>';
   }
 
-  var ICON = 'width="18" height="18" aria-hidden="true"';
+  /* social icons: shown only for the links filled in under SOCIAL in data.js */
+  var SOC = window.SOCIAL || {};
+  var SOCIAL_ICONS = {
+    instagram: ['Instagram', '<rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle>'],
+    linkedin: ['LinkedIn', '<rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 11v5M8 8v.01M12 16v-5M12 13c0-1.6 1-2.2 2.1-2.2S16 11.6 16 13.2V16"></path>'],
+    x: ['X (Twitter)', '<path d="M5 4l14 16M19 4L5 20"></path>'],
+    facebook: ['Facebook', '<path d="M14.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.6 1.7-1.6H18V3.5c-.4-.1-1.3-.2-2.3-.2-2.5 0-4 1.5-4 4.1v2.4H9V13h2.7v8z"></path>'],
+    youtube: ['YouTube', '<rect x="3" y="6" width="18" height="12" rx="4"></rect><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"></path>']
+  };
+  var social = Object.keys(SOCIAL_ICONS).filter(function (k) { return SOC[k]; }).map(function (k) {
+    return '<a href="' + esc(SOC[k]) + '" target="_blank" rel="noopener" aria-label="Department of Physics on ' + SOCIAL_ICONS[k][0] + '" title="' + SOCIAL_ICONS[k][0] + '" style="width:40px;height:40px;border-radius:50%;border:1.5px solid #4a5878;color:#eef1f6;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">' +
+      '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + SOCIAL_ICONS[k][1] + '</svg></a>';
+  }).join('');
+  var socialBlock = social ? '<div style="margin-top:18px;"><div style="font-size:13px;font-weight:600;color:#98a3bd;margin-bottom:8px;">Follow the department</div><div style="display:flex;gap:10px;flex-wrap:wrap;">' + social + '</div></div>' : '';
+
   var footer =
     '<footer style="background:#141d33;color:#c7cede;margin-top:0;"><div style="max-width:1140px;margin:0 auto;padding:44px 24px 24px;">' +
     '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;margin-bottom:32px;">' +
     '<div><h4 style="color:#fff;font-size:17px;">Department of Physics</h4>' +
     '<p style="font-size:14.5px;margin:0 0 14px;">Vikram Dev University, Jayapur, Koraput, Odisha, India. Part of the university that carries forward Jeypore College, founded 1947.</p>' +
-    '<p style="font-size:14px;margin:0;"><a href="mailto:vdu.physics@gmail.com" style="color:#d9ab5c;text-decoration:none;">vdu.physics@gmail.com</a></p></div>' +
+    '<p style="font-size:14px;margin:0;"><a href="mailto:vdu.physics@gmail.com" style="color:#d9ab5c;text-decoration:none;">vdu.physics@gmail.com</a></p>' + socialBlock + '</div>' +
     '<div><h4 style="color:#fff;font-size:15px;">Quick links</h4><ul style="list-style:none;padding:0;margin:0;font-size:14.5px;line-height:2;">' +
     '<li><a href="https://vikramdevuniversity.ac.in/#/home" target="_blank" rel="noopener" style="color:#c7cede;text-decoration:none;">University home</a></li>' +
     '<li><a href="programmes.html" style="color:#c7cede;text-decoration:none;">Programmes</a></li>' +

@@ -41,8 +41,7 @@ window.RESOURCES = [
 //   label: the underlined link text   text: the rest of the sentence   url: where it goes   external: true = opens in a new tab
 window.ALERTS = [
   {"label": "Student resources", "text": " — question papers, notes & slides", "url": "resources.html"},
-  {"label": "NGPE 2027", "text": " — poster & brochure out on the IAPT site", "url": "https://www.indapt.org/national-graduate-physics-examination-ngpe", "external": true},
-  {"label": "IISc Online Winter School", "text": " — 14–18 Dec 2026, register by 1 Dec", "url": "https://physics.iisc.ac.in/events-all/schools/winter-school/", "external": true}
+  {"label": "Friday Seminar", "text": " — want to give a talk? Register with the short form", "url": "https://docs.google.com/forms/d/1781gSBEr_DGqn0pGsjHB4YU9dqxHqxUWZY0ythMUBwM/viewform", "external": true}
 ];
 
 // NEWS & NOTICES page. group: "exam" (competitive exams) or "opportunity" (winter schools etc.). Delete a line when it is no longer relevant.
@@ -68,6 +67,16 @@ window.ACHIEVEMENTS = [
 window.ALUMNI_VISITS = [
   {"name": "Shakambari Sadangi", "batch": "B.Sc. 2009–2012 Batch", "text": "Visited us and addressed our students on 20 Nov 2026.", "images": [{"src": "assets/alumni-visit-1.jpg", "alt": "Alumna Shakambari Sadangi addressing students in the classroom"}, {"src": "assets/alumni-visit-2.jpg", "alt": "Shakambari Sadangi speaking to students and faculty"}, {"src": "assets/alumni-visit-3.jpg", "alt": "Shakambari Sadangi explaining a topic on the blackboard"}]}
 ];
+
+// SOCIAL MEDIA - the department's official pages, shown as icons in the footer of every page.
+// Paste a link between the quotes; an icon appears only when its link is filled in.
+window.SOCIAL = {
+  "instagram": "https://www.instagram.com/physics_vdu/",
+  "linkedin": "",
+  "x": "",
+  "facebook": "",
+  "youtube": ""
+};
 
 // GALLERY SLIDES - img = file in assets/, caption shown under the photo.
 window.SLIDES = [
