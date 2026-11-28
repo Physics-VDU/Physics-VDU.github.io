@@ -103,12 +103,11 @@ window.SOCIAL = {
 // GALLERY SLIDES - img = file in assets/, caption shown under the photo.
 window.SLIDES = [
   {"img": "assets/faculty-group-1.jpg", "caption": "Department Faculty"},
-  {"img": "assets/faculty-group-2.jpg", "caption": "Department Faculty"},
   {"img": "assets/ug-1st-year-batch.jpg", "caption": "UG 1st Year Batch"},
   {"img": "assets/pg-1st-year-students.jpg", "caption": "PG 1st Year Students"},
   {"img": "assets/ug-5th-minor-students.jpg", "caption": "UG 5th Minor Students"},
+  {"img": "assets/faculty-group-2.jpg", "caption": "Department Faculty"},
   {"img": "assets/electronics-lab.jpg", "caption": "Electronics Lab"},
-  {"img": "assets/spectrum-wall-magazine.jpg", "caption": "SPECTRUM Wall Magazine"},
   {"img": "assets/seminar-presenter.jpg", "caption": "Departmental Seminar — 18 Sep 2026"},
   {"img": "assets/teachers-day-1.jpg", "caption": "Teachers Day 2026"},
   {"img": "assets/teachers-day-2.jpg", "caption": "Teachers Day 2026"},
@@ -122,4 +121,4 @@ window.SEMINAR_FORM = "https://docs.google.com/forms/d/1781gSBEr_DGqn0pGsjHB4YU9
 
 // SITE UPDATE STAMP - shown in small text at the bottom of every page, so you can see which version of this file is live.
 // Change it whenever you update data.js (any text is fine).
-window.SITE_UPDATED = "29 Nov 2026";
+window.SITE_UPDATED = "29 Nov 2026 · v2";
