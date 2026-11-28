@@ -104,14 +104,15 @@ window.SOCIAL = {
 window.SLIDES = [
   {"img": "assets/faculty-group-1.jpg", "caption": "Department Faculty"},
   {"img": "assets/faculty-group-2.jpg", "caption": "Department Faculty"},
+  {"img": "assets/ug-1st-year-batch.jpg", "caption": "UG 1st Year Batch"},
+  {"img": "assets/pg-1st-year-students.jpg", "caption": "PG 1st Year Students"},
+  {"img": "assets/ug-5th-minor-students.jpg", "caption": "UG 5th Minor Students"},
   {"img": "assets/electronics-lab.jpg", "caption": "Electronics Lab"},
   {"img": "assets/spectrum-wall-magazine.jpg", "caption": "SPECTRUM Wall Magazine"},
   {"img": "assets/seminar-presenter.jpg", "caption": "Departmental Seminar — 18 Sep 2026"},
   {"img": "assets/teachers-day-1.jpg", "caption": "Teachers Day 2026"},
   {"img": "assets/teachers-day-2.jpg", "caption": "Teachers Day 2026"},
   {"img": "assets/ganesh-chaturthi.jpg", "caption": "Ganesh Chaturthi 2026 at Department", "objectPosition": "top"},
-  {"img": "assets/ug-5th-minor-students.jpg", "caption": "UG 5th Minor Students"},
-  {"img": "assets/pg-1st-year-students.jpg", "caption": "PG 1st Year Students"},
   {"img": "assets/department-garden.jpg", "caption": "Our New Department Garden"}
 ];
 
