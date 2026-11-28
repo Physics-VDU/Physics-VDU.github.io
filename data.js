@@ -119,3 +119,7 @@ window.SLIDES = [
 // SEMINAR REGISTRATION FORM - paste the Google Form link between the quotes.
 // While it is empty, nothing is shown. Once filled, a "Register to give a talk" button appears under "Student Seminars".
 window.SEMINAR_FORM = "https://docs.google.com/forms/d/1781gSBEr_DGqn0pGsjHB4YU9dqxHqxUWZY0ythMUBwM/viewform";
+
+// SITE UPDATE STAMP - shown in small text at the bottom of every page, so you can see which version of this file is live.
+// Change it whenever you update data.js (any text is fine).
+window.SITE_UPDATED = "29 Nov 2026";

@@ -81,7 +81,8 @@
     '<li><a href="alumni-contact.html#contact" style="color:#c7cede;text-decoration:none;">Contact</a></li></ul></div></div>' +
     '<div style="border-top:1px solid #33405e;padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;font-size:13.5px;color:#98a3bd;">' +
     '<span>© ' + new Date().getFullYear() + ' Department of Physics, Vikram Dev University.</span>' +
-    '<span>तमसो मा ज्योतिर्गमय — From darkness, lead me to light.</span></div></div></footer>';
+    '<span>तमसो मा ज्योतिर्गमय — From darkness, lead me to light.</span>' +
+    (window.SITE_UPDATED ? '<span style="width:100%;font-size:12px;color:#7f8aa6;">Site updated: ' + esc(window.SITE_UPDATED) + '</span>' : '') + '</div></div></footer>';
 
   /* the header goes in at once (this script sits right under the placeholder), so it is there before the rest of the page loads */
   var h = document.getElementById('site-header');
